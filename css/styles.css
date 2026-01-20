@@ -1840,6 +1840,8 @@ body {
   border-bottom: 1px solid var(--slate-200);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
   position: relative;
 }
 
@@ -1855,6 +1857,8 @@ body {
   padding: 0.5rem;
   border-radius: 0.5rem;
   transition: background-color 0.2s ease;
+  flex: 1;
+  min-width: 0;
 }
 
 .sidebar-logo:hover {
@@ -1882,7 +1886,7 @@ body {
 }
 
 .sidebar-toggle {
-  margin-left: auto;
+  flex-shrink: 0;
   background: none;
   border: none;
   cursor: pointer;

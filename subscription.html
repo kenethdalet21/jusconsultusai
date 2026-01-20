@@ -7,6 +7,14 @@
   <meta name="description" content="Upgrade your JusConsultus AI subscription for unlimited access.">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/png" href="images/logo.png">
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  
+  <!-- Stripe.js -->
+  <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
   <div class="app-container">
@@ -948,7 +956,33 @@
       } else {
         alert('Thank you for your interest! Our sales team will contact you shortly.\n\nEmail: enterprise@jusconsultus.com\nPhone: +63 2 8888 1234');
       }
+      setTimeout(() => {
+        window.location.href = 'contact.html?subject=Enterprise Plan';
+      }, 2000);
     }
+  </script>
+  
+  <!-- Firebase Configuration -->
+  <script src="js/firebase-config.js"></script>
+  
+  <!-- Stripe Integration -->
+  <script src="js/stripe-integration.js"></script>
+  
+  <script>
+    // Initialize Firebase and Stripe on page load
+    let firebaseReady = false;
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Firebase
+      if (typeof initializeFirebase === 'function') {
+        firebaseReady = initializeFirebase();
+      }
+      
+      // Initialize Stripe
+      if (typeof initializeStripe === 'function') {
+        initializeStripe();
+      }
+    });
   </script>
 </body>
 </html>

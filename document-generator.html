@@ -7,6 +7,11 @@
   <meta name="description" content="Create professional legal documents with AI assistance.">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/png" href="images/logo.png">
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
 </head>
 <body>
   <div class="app-container">
@@ -634,137 +639,17 @@
 
     // Select template
     function selectTemplate(templateId) {
-      const templates = {
-        complaint: {
-          title: 'Complaint',
-          content: `<p style="text-align: center; font-weight: bold;">REPUBLIC OF THE PHILIPPINES</p>
-<p style="text-align: center;">REGIONAL TRIAL COURT</p>
-<p style="text-align: center;">_______ Judicial Region</p>
-<p style="text-align: center;">Branch ___</p>
-<p style="text-align: center;">[City/Municipality], [Province]</p>
-<br>
-<p><strong>[PLAINTIFF NAME],</strong></p>
-<p style="padding-left: 2rem;">Plaintiff,</p>
-<br>
-<p style="text-align: center;">- versus -</p>
-<p style="text-align: right;">Civil Case No. ___________</p>
-<br>
-<p><strong>[DEFENDANT NAME],</strong></p>
-<p style="padding-left: 2rem;">Defendant.</p>
-<p>x - - - - - - - - - - - - - - - - - - - - - - - x</p>
-<br>
-<p style="text-align: center; font-weight: bold; text-decoration: underline;">COMPLAINT</p>
-<br>
-<p>COMES NOW, the Plaintiff, by counsel, unto this Honorable Court, most respectfully states:</p>
-<br>
-<p><strong>I. THE PARTIES</strong></p>
-<br>
-<p>1. Plaintiff [NAME] is of legal age, Filipino, and with residence and postal address at [ADDRESS];</p>
-<br>
-<p>2. Defendant [NAME] is likewise of legal age, Filipino, and with residence and postal address at [ADDRESS], where he/she may be served with summons and other court processes;</p>
-<br>
-<p><strong>II. STATEMENT OF FACTS</strong></p>
-<br>
-<p>3. [State the facts constituting the cause of action];</p>
-<br>
-<p><strong>III. CAUSE OF ACTION</strong></p>
-<br>
-<p>4. [State the legal basis for the complaint];</p>
-<br>
-<p><strong>IV. PRAYER</strong></p>
-<br>
-<p>WHEREFORE, premises considered, it is most respectfully prayed that after due notice and hearing, judgment be rendered in favor of the Plaintiff and against the Defendant:</p>
-<br>
-<p style="padding-left: 2rem;">a) [Relief sought];</p>
-<p style="padding-left: 2rem;">b) [Other reliefs];</p>
-<p style="padding-left: 2rem;">c) Such other relief as may be deemed just and equitable under the premises.</p>
-<br>
-<p style="padding-left: 15rem;">[City], Philippines, [Date].</p>
-<br>
-<p style="padding-left: 15rem; text-align: center;">_________________________</p>
-<p style="padding-left: 15rem; text-align: center;"><strong>COUNSEL FOR PLAINTIFF</strong></p>`
-        },
-        demandLetter: {
-          title: 'Demand Letter',
-          content: `<p style="text-align: right;">[Date]</p>
-<br>
-<p><strong>[Recipient Name]</strong></p>
-<p>[Address Line 1]</p>
-<p>[Address Line 2]</p>
-<br>
-<p>Dear [Mr./Ms./Mrs. Last Name],</p>
-<br>
-<p style="text-align: center; font-weight: bold;">RE: FORMAL DEMAND FOR PAYMENT</p>
-<br>
-<p>Greetings!</p>
-<br>
-<p>We write on behalf of our client, [CLIENT NAME], to formally demand payment of the amount of <strong>[AMOUNT IN WORDS] (PHP [AMOUNT IN FIGURES])</strong> representing [describe the nature of the obligation, e.g., "unpaid salary for the months of _________" or "balance of the purchase price of goods delivered"].</p>
-<br>
-<p>Our records show that despite repeated verbal and written demands, you have failed and refused, and continue to fail and refuse, to settle your obligation which has been due and demandable since [DATE].</p>
-<br>
-<p>In view of the foregoing, we hereby make a <strong>FINAL DEMAND</strong> upon you to pay the aforesaid amount within <strong>FIVE (5) DAYS</strong> from receipt of this letter. Otherwise, we shall be constrained to institute the appropriate legal action against you, without further notice.</p>
-<br>
-<p>Please be advised that in the event of litigation, you shall likewise be held liable for:</p>
-<p style="padding-left: 2rem;">a) Legal interest at the rate allowed by law;</p>
-<p style="padding-left: 2rem;">b) Attorney's fees equivalent to 25% of the total amount due;</p>
-<p style="padding-left: 2rem;">c) Costs of suit; and</p>
-<p style="padding-left: 2rem;">d) Such other relief as may be warranted under the circumstances.</p>
-<br>
-<p>We trust that you will give this matter your immediate and favorable attention to avoid any unpleasant consequences.</p>
-<br>
-<p>Thank you.</p>
-<br>
-<p>Very truly yours,</p>
-<br>
-<br>
-<p style="text-decoration: underline;">____________________________</p>
-<p><strong>[ATTORNEY NAME]</strong></p>
-<p>Counsel for [CLIENT NAME]</p>
-<p>Roll of Attorneys No. _________</p>
-<p>IBP Lifetime No. _________</p>
-<p>PTR No. _________, [Date], [Place]</p>
-<p>MCLE Compliance No. _________</p>`
-        },
-        affidavit: {
-          title: 'Affidavit',
-          content: `<p style="text-align: center; font-weight: bold;">REPUBLIC OF THE PHILIPPINES )</p>
-<p style="text-align: center;">[CITY/MUNICIPALITY] ) S.S.</p>
-<br>
-<p style="text-align: center; font-weight: bold; text-decoration: underline;">AFFIDAVIT</p>
-<br>
-<p>I, <strong>[FULL NAME]</strong>, of legal age, [civil status], Filipino citizen, and with residence and postal address at [COMPLETE ADDRESS], after having been duly sworn in accordance with law, do hereby depose and state:</p>
-<br>
-<p>1. That I am the [state capacity/relationship, e.g., "owner of...", "employee of...", "witness to..."];</p>
-<br>
-<p>2. That [state the facts you are attesting to];</p>
-<br>
-<p>3. That [continue stating relevant facts];</p>
-<br>
-<p>4. That I am executing this Affidavit to attest to the truth of the foregoing facts and for whatever legal purpose this may serve.</p>
-<br>
-<p>IN WITNESS WHEREOF, I have hereunto set my hand this _____ day of _____________, 20___ at [CITY/MUNICIPALITY], Philippines.</p>
-<br>
-<br>
-<p style="text-align: center;">____________________________</p>
-<p style="text-align: center;"><strong>AFFIANT</strong></p>
-<br>
-<p style="text-align: center; font-weight: bold;">SUBSCRIBED AND SWORN</p> to before me this _____ day of _____________, 20___ at [CITY/MUNICIPALITY], Philippines, affiant exhibiting to me his/her [GOVERNMENT-ISSUED ID] bearing ID No. _________________ issued on _________________ at _________________.
-<br>
-<br>
-<p>Doc. No. _____;</p>
-<p>Page No. _____;</p>
-<p>Book No. _____;</p>
-<p>Series of 20___.</p>`
-        }
-      };
-
+      // Use templates from the external file if available, otherwise use local fallback
+      const templates = typeof DOCUMENT_TEMPLATES !== 'undefined' ? DOCUMENT_TEMPLATES : {};
+      
       const template = templates[templateId];
       if (template) {
         document.getElementById('documentTitle').value = template.title;
         document.getElementById('editorContent').innerHTML = template.content;
         updateWordCount();
+        showToast(`${template.title} template loaded successfully!`, 'success');
       } else {
-        alert(`Template "${templateId}" coming soon!`);
+        showToast(`Template "${templateId}" is not available`, 'warning');
       }
     }
 
@@ -949,6 +834,20 @@ ${content}
       motion: { content: '<p>Motion Template</p>' },
       contract: { content: '<p>Contract Template</p>' }
     };
+  </script>
+  
+  <!-- Document Templates -->
+  <script src="js/document-templates.js"></script>
+  
+  <!-- Firebase Configuration (Initialize Firebase) -->
+  <script src="js/firebase-config.js"></script>
+  <script>
+    // Initialize Firebase on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof initializeFirebase === 'function') {
+        initializeFirebase();
+      }
+    });
   </script>
 </body>
 </html>

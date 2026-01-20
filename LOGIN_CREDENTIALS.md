@@ -38,15 +38,15 @@ Role:     superadmin
 #### 1. Free Plan User
 ```
 Email:    test@jusconsultus.com
-Password: test123
-Plan:     Free (50 queries limit)
+Password: testuser123
+Plan:     Free (10 queries per day)
 Payment:  ✅ Exempt (pre-configured)
 ```
 
 #### 2. Pro Plan User
 ```
 Email:    pro@jusconsultus.com
-Password: pro123
+Password: prouser123
 Plan:     Pro (unlimited queries)
 Payment:  ✅ Exempt (pre-configured)
 ```

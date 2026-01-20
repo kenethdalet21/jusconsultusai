@@ -14,8 +14,9 @@ This is a **fully functional static demo website** using localStorage for data p
 
 | Account Type | Email | Password | Plan | Features |
 |-------------|-------|----------|------|----------|
-| **Free User** | test@jusconsultus.com | test123 | Free | 50 queries/day, basic features |
-| **Pro User** | pro@jusconsultus.com | pro123 | Pro (unlimited) | Unlimited queries, Deep Think, all features |
+| **Free User** | test@jusconsultus.com | testuser123 | Free | 10 queries/day, basic features |
+| **Pro User** | pro@jusconsultus.com | prouser123 | Pro (unlimited) | Unlimited queries, all features |
+| **Admin** | admin@jusconsultus.com | ChangeMe123! | Enterprise | Full admin access |
 | **Admin** | admin | admin | Admin | Full admin access, unlimited everything |
 
 ---

@@ -6,10 +6,10 @@
 // ============================================
 
 const DEMO_USERS = {
-  'test@jusconsultus.com': { password: 'test123', name: 'Test User', role: 'free', plan: 'Free' },
-  'pro@jusconsultus.com': { password: 'pro123', name: 'Pro User', role: 'pro', plan: 'Professional' },
-  'admin': { password: 'admin', name: 'Administrator', role: 'admin', plan: 'Enterprise' },
-  'admin@jusconsultus.com': { password: 'admin123', name: 'Admin User', role: 'admin', plan: 'Enterprise' }
+  'test@jusconsultus.com': { password: 'testuser123', name: 'Test User', role: 'free', plan: 'Free', email: 'test@jusconsultus.com' },
+  'pro@jusconsultus.com': { password: 'prouser123', name: 'Pro User', role: 'pro', plan: 'Professional', email: 'pro@jusconsultus.com' },
+  'admin': { password: 'ChangeMe123!', name: 'Administrator', role: 'admin', plan: 'Enterprise', email: 'admin@jusconsultus.com' },
+  'admin@jusconsultus.com': { password: 'ChangeMe123!', name: 'Admin User', role: 'admin', plan: 'Enterprise', email: 'admin@jusconsultus.com' }
 };
 
 // ============================================

@@ -672,6 +672,16 @@
       border-color: rgba(255, 255, 255, 0.1);
     }
 
+    /* Hide sidebar toggle on desktop - sidebar is frozen */
+    @media (min-width: 1024px) {
+      .sidebar-toggle {
+        display: none !important;
+      }
+      .sidebar {
+        position: fixed !important;
+      }
+    }
+
     @media (max-width: 1023px) {
       #mobileHeader {
         display: block !important;
@@ -715,18 +725,17 @@
       document.getElementById('editorContent').addEventListener('input', updateWordCount);
     });
 
-    // Sidebar toggle
+    // Sidebar toggle - Disabled on document generator page
     function toggleSidebar() {
+      // Only allow toggle on mobile
       const sidebar = document.getElementById('sidebar');
       const overlay = document.getElementById('sidebarOverlay');
       
       if (window.innerWidth < 1024) {
         sidebar.classList.toggle('open');
         overlay.classList.toggle('active');
-      } else {
-        sidebar.classList.toggle('collapsed');
-        document.querySelector('.main-content').classList.toggle('expanded');
       }
+      // Desktop sidebar is frozen on document generator page
     }
 
     // Switch mode

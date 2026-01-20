@@ -536,6 +536,24 @@
       btn.addEventListener('click', function() {
         document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
+        
+        // Auto-fill chat input based on mode
+        const mode = this.getAttribute('data-mode');
+        const chatInput = document.getElementById('chatInput');
+        
+        if (chatInput && mode) {
+          const prompts = {
+            'find': 'Find ',
+            'explain': 'Explain ',
+            'draft': 'Draft ',
+            'digest': 'Digest '
+          };
+          
+          chatInput.value = prompts[mode] || '';
+          chatInput.focus();
+          // Move cursor to end
+          chatInput.setSelectionRange(chatInput.value.length, chatInput.value.length);
+        }
       });
     });
 

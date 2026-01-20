@@ -356,6 +356,59 @@
                 </button>
               </div>
             </div>
+
+            <!-- Document Templates -->
+            <div style="margin-top: 1.5rem;">
+              <h4 style="font-size: 0.75rem; font-weight: 600; color: var(--slate-500); margin-bottom: 0.75rem;">Document Templates</h4>
+              <div style="position: relative;">
+                <button class="btn btn-primary w-full" onclick="toggleDocGenTemplateMenu()" id="docGenTemplateBtn" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.875rem; margin-bottom: 0.5rem;">
+                  <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                  Generate
+                  <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-left: auto;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                
+                <!-- Template Menu Dropdown -->
+                <div id="docGenTemplateMenu" class="template-dropdown" style="display: none; position: absolute; top: 100%; left: 0; right: 0; margin-top: 0.5rem; background: white; border: 1px solid var(--slate-200); border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); max-height: 300px; overflow-y: auto; z-index: 50;">
+                  <!-- Pleadings -->
+                  <div style="border-bottom: 1px solid var(--slate-100);">
+                    <div style="padding: 0.5rem 0.75rem; font-size: 0.65rem; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 0.05em;">Pleadings</div>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('complaint')">Complaint</button>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('answer')">Answer</button>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('motion')">Motion</button>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('petition')">Petition</button>
+                  </div>
+                  
+                  <!-- Basic Documents -->
+                  <div style="border-bottom: 1px solid var(--slate-100);">
+                    <div style="padding: 0.5rem 0.75rem; font-size: 0.65rem; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 0.05em;">Basic Documents</div>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('affidavit')">Affidavit</button>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('demandLetter')">Demand Letter</button>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('memorandum')">Legal Memorandum</button>
+                  </div>
+                  
+                  <!-- Contracts -->
+                  <div style="border-bottom: 1px solid var(--slate-100);">
+                    <div style="padding: 0.5rem 0.75rem; font-size: 0.65rem; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 0.05em;">Contracts</div>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('contract')">Contract/Agreement</button>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('lease')">Lease Agreement</button>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('employment')">Employment Contract</button>
+                  </div>
+                  
+                  <!-- Corporate & Property -->
+                  <div>
+                    <div style="padding: 0.5rem 0.75rem; font-size: 0.65rem; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 0.05em;">Corporate & Property</div>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('deed')">Deed of Absolute Sale</button>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('spa')">Special Power of Attorney</button>
+                    <button class="template-menu-item" onclick="selectDocGenTemplate('resolution')">Board Resolution</button>
+                  </div>
+                </div>
+              </div>
+              
+              <button class="btn btn-secondary w-full" onclick="window.location.href='library.html'" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.875rem;">
+                <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+                Upload & Analyze
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -573,6 +626,50 @@
       background: rgba(99, 102, 241, 0.2);
       border-color: rgba(99, 102, 241, 0.5);
       color: var(--primary-300);
+    }
+
+    .template-menu-item {
+      width: 100%;
+      text-align: left;
+      padding: 0.625rem 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--slate-700);
+      background: white;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: block;
+    }
+    .template-menu-item:hover {
+      background: var(--primary-50);
+      color: var(--primary-700);
+    }
+    .dark .template-menu-item {
+      background: var(--slate-800);
+      color: var(--slate-300);
+    }
+    .dark .template-menu-item:hover {
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--primary-400);
+    }
+    
+    .template-dropdown {
+      scrollbar-width: thin;
+      scrollbar-color: var(--slate-300) transparent;
+    }
+    .template-dropdown::-webkit-scrollbar {
+      width: 6px;
+    }
+    .template-dropdown::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .template-dropdown::-webkit-scrollbar-thumb {
+      background: var(--slate-300);
+      border-radius: 3px;
+    }
+    .dark .template-dropdown {
+      background: var(--slate-800);
+      border-color: rgba(255, 255, 255, 0.1);
     }
 
     @media (max-width: 1023px) {
@@ -835,6 +932,26 @@ ${content}
       motion: { content: '<p>Motion Template</p>' },
       contract: { content: '<p>Contract Template</p>' }
     };
+
+    // Document Generator Template Menu Functions
+    function toggleDocGenTemplateMenu() {
+      const menu = document.getElementById('docGenTemplateMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function selectDocGenTemplate(templateId) {
+      document.getElementById('docGenTemplateMenu').style.display = 'none';
+      loadTemplate(templateId);
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('docGenTemplateMenu');
+      const button = document.getElementById('docGenTemplateBtn');
+      if (menu && button && !menu.contains(event.target) && !button.contains(event.target)) {
+        menu.style.display = 'none';
+      }
+    });
   </script>
   
   <!-- Document Templates -->

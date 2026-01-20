@@ -212,64 +212,6 @@
           </div>
         </div>
 
-        <!-- Document Templates Section -->
-        <div style="padding: 1rem 1.5rem; border-bottom: 1px solid var(--slate-200); background: var(--slate-50);">
-          <h3 style="font-size: 0.875rem; font-weight: 600; color: var(--slate-700); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-            <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            Document Templates
-          </h3>
-          <div style="display: flex; gap: 0.5rem;">
-            <div style="position: relative; flex: 1;">
-              <button class="btn btn-primary" onclick="toggleTemplateMenu()" id="generateTemplateBtn" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.875rem; padding: 0.625rem 1rem;">
-                <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                Generate
-                <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-left: auto;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </button>
-              
-              <!-- Template Menu Dropdown -->
-              <div id="templateMenu" class="template-dropdown" style="display: none; position: absolute; top: 100%; left: 0; right: 0; margin-top: 0.5rem; background: white; border: 1px solid var(--slate-200); border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); max-height: 400px; overflow-y: auto; z-index: 50;">
-                <!-- Pleadings -->
-                <div style="border-bottom: 1px solid var(--slate-100);">
-                  <div style="padding: 0.75rem 1rem; font-size: 0.75rem; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 0.05em;">Pleadings</div>
-                  <button class="template-menu-item" onclick="selectTemplate('Complaint')">Complaint</button>
-                  <button class="template-menu-item" onclick="selectTemplate('Answer')">Answer</button>
-                  <button class="template-menu-item" onclick="selectTemplate('Motion')">Motion</button>
-                  <button class="template-menu-item" onclick="selectTemplate('Petition')">Petition</button>
-                </div>
-                
-                <!-- Basic Documents -->
-                <div style="border-bottom: 1px solid var(--slate-100);">
-                  <div style="padding: 0.75rem 1rem; font-size: 0.75rem; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 0.05em;">Basic Documents</div>
-                  <button class="template-menu-item" onclick="selectTemplate('Affidavit')">Affidavit</button>
-                  <button class="template-menu-item" onclick="selectTemplate('Demand Letter')">Demand Letter</button>
-                  <button class="template-menu-item" onclick="selectTemplate('Legal Memorandum')">Legal Memorandum</button>
-                </div>
-                
-                <!-- Contracts -->
-                <div style="border-bottom: 1px solid var(--slate-100);">
-                  <div style="padding: 0.75rem 1rem; font-size: 0.75rem; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 0.05em;">Contracts</div>
-                  <button class="template-menu-item" onclick="selectTemplate('Contract/Agreement')">Contract/Agreement</button>
-                  <button class="template-menu-item" onclick="selectTemplate('Lease Agreement')">Lease Agreement</button>
-                  <button class="template-menu-item" onclick="selectTemplate('Employment Contract')">Employment Contract</button>
-                </div>
-                
-                <!-- Corporate & Property -->
-                <div>
-                  <div style="padding: 0.75rem 1rem; font-size: 0.75rem; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 0.05em;">Corporate & Property</div>
-                  <button class="template-menu-item" onclick="selectTemplate('Deed of Absolute Sale')">Deed of Absolute Sale</button>
-                  <button class="template-menu-item" onclick="selectTemplate('Special Power of Attorney')">Special Power of Attorney</button>
-                  <button class="template-menu-item" onclick="selectTemplate('Board Resolution')">Board Resolution</button>
-                </div>
-              </div>
-            </div>
-            
-            <button class="btn btn-secondary" onclick="uploadDocument()" style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; padding: 0.625rem 1rem; white-space: nowrap;">
-              <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
-              Upload & Analyze
-            </button>
-          </div>
-        </div>
-
         <!-- Chat Messages Area -->
         <div class="chat-messages" id="chatMessages" style="display: block;">
           <!-- Welcome Message -->
@@ -506,50 +448,6 @@
       gap: 0.125rem;
     }
     
-    .template-menu-item {
-      width: 100%;
-      text-align: left;
-      padding: 0.75rem 1rem;
-      font-size: 0.875rem;
-      color: var(--slate-700);
-      background: white;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: block;
-    }
-    .template-menu-item:hover {
-      background: var(--primary-50);
-      color: var(--primary-700);
-    }
-    .dark .template-menu-item {
-      background: var(--slate-800);
-      color: var(--slate-300);
-    }
-    .dark .template-menu-item:hover {
-      background: rgba(99, 102, 241, 0.1);
-      color: var(--primary-400);
-    }
-    
-    .template-dropdown {
-      scrollbar-width: thin;
-      scrollbar-color: var(--slate-300) transparent;
-    }
-    .template-dropdown::-webkit-scrollbar {
-      width: 6px;
-    }
-    .template-dropdown::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    .template-dropdown::-webkit-scrollbar-thumb {
-      background: var(--slate-300);
-      border-radius: 3px;
-    }
-    .dark .template-dropdown {
-      background: var(--slate-800);
-      border-color: rgba(255, 255, 255, 0.1);
-    }
-    
     @media (max-width: 1023px) {
       #mobileHeader {
         display: block !important;
@@ -675,39 +573,6 @@
       });
       console.log('Selected libraries:', activeLibraries);
     }
-
-    // Template menu toggle
-    function toggleTemplateMenu() {
-      const menu = document.getElementById('templateMenu');
-      const isVisible = menu.style.display === 'block';
-      menu.style.display = isVisible ? 'none' : 'block';
-    }
-
-    // Select template
-    function selectTemplate(templateName) {
-      // Close menu
-      document.getElementById('templateMenu').style.display = 'none';
-      
-      // Redirect to document generator with template
-      window.location.href = `document-generator.html?template=${encodeURIComponent(templateName)}`;
-    }
-
-    // Upload document function
-    function uploadDocument() {
-      // Redirect to library upload
-      window.location.href = 'library.html';
-    }
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const menu = document.getElementById('templateMenu');
-      const btn = document.getElementById('generateTemplateBtn');
-      
-      if (menu && btn && !menu.contains(event.target) && !btn.contains(event.target)) {
-        menu.style.display = 'none';
-      }
-    });
-
     // Tab selector
     document.querySelectorAll('.tab-pill').forEach(btn => {
       btn.addEventListener('click', function() {

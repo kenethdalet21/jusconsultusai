@@ -155,9 +155,9 @@ function handleSignup(e) {
   if (successDiv) successDiv.style.display = 'none';
   
   // Validate
-  if (!name || name.length < 2) {
+  if (!name || name.trim().length < 2) {
     if (errorDiv) {
-      errorDiv.textContent = 'Please enter your name';
+      errorDiv.textContent = 'Please enter a valid name (at least 2 characters)';
       errorDiv.style.display = 'block';
     }
     return;
@@ -171,9 +171,9 @@ function handleSignup(e) {
     return;
   }
   
-  if (!validatePassword(password)) {
+  if (password.length < 6) {
     if (errorDiv) {
-      errorDiv.textContent = 'Password must be at least 8 characters';
+      errorDiv.textContent = 'Password must be at least 6 characters';
       errorDiv.style.display = 'block';
     }
     return;
@@ -187,16 +187,21 @@ function handleSignup(e) {
     return;
   }
   
-  // Show success message
+  // Show success message and switch to signin
   if (successDiv) {
-    successDiv.textContent = 'Account created successfully! Redirecting...';
+    successDiv.textContent = 'Account created successfully! Please sign in to continue.';
     successDiv.style.display = 'block';
   }
   
-  // Simulate redirect
+  // Switch to sign in tab after successful signup
   setTimeout(() => {
-    alert('This is a demo. In production, you would be redirected to the app.');
-  }, 1500);
+    switchTab('signin');
+    // Pre-fill email if available
+    const signinEmail = document.getElementById('email');
+    if (signinEmail && email) {
+      signinEmail.value = email;
+    }
+  }, 2000);
 }
 
 // Contact Form Handler

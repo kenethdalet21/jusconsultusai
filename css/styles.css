@@ -1190,6 +1190,51 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Demo Credential Buttons */
+.demo-credential-btn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  color: var(--slate-700);
+  background: white;
+  border: 1px solid var(--primary-200);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.demo-credential-btn:hover {
+  background: var(--primary-50);
+  border-color: var(--primary-300);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.1), 0 2px 4px -1px rgba(99, 102, 241, 0.06);
+}
+
+.demo-credential-btn:active {
+  transform: translateY(0);
+}
+
+.demo-credential-btn strong {
+  color: var(--primary-600);
+  margin-right: 0.5rem;
+}
+
+.dark .demo-credential-btn {
+  background: var(--slate-800);
+  color: var(--slate-300);
+  border-color: var(--primary-700);
+}
+
+.dark .demo-credential-btn:hover {
+  background: var(--slate-700);
+  border-color: var(--primary-600);
+}
+
+.dark .demo-credential-btn strong {
+  color: var(--primary-400);
+}
+
 /* How It Works - Steps */
 .step-number {
   width: 4rem;
@@ -1738,6 +1783,17 @@ body {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-logo:hover {
+  background-color: var(--slate-100);
+}
+
+.dark .sidebar-logo:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .sidebar-logo img {

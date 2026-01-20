@@ -1,5 +1,28 @@
 // JusConsultus AI - Main JavaScript
 
+// Quick Login Function
+function quickLogin(email, password) {
+  // Fill in the form
+  const emailInput = document.getElementById('email');
+  const passwordInput = document.getElementById('password');
+  
+  if (emailInput && passwordInput) {
+    emailInput.value = email;
+    passwordInput.value = password;
+    
+    // Simulate form submission
+    const loginForm = document.querySelector('form[onsubmit*="handleLogin"]');
+    if (loginForm) {
+      // Create a synthetic event
+      const event = new Event('submit', {
+        bubbles: true,
+        cancelable: true
+      });
+      loginForm.dispatchEvent(event);
+    }
+  }
+}
+
 // Theme Toggle
 function toggleTheme() {
   const html = document.documentElement;
@@ -59,7 +82,7 @@ function validateEmail(email) {
 }
 
 function validatePassword(password) {
-  return password.length >= 8;
+  return password.length >= 6;
 }
 
 // Demo Users Database
@@ -120,7 +143,7 @@ function handleLogin(e) {
   
   if (!validatePassword(password)) {
     if (errorDiv) {
-      errorDiv.textContent = 'Password must be at least 8 characters';
+      errorDiv.textContent = 'Password must be at least 6 characters';
       errorDiv.style.display = 'block';
     }
     return;
@@ -128,7 +151,7 @@ function handleLogin(e) {
   
   // Invalid credentials
   if (errorDiv) {
-    errorDiv.textContent = 'Invalid email or password. Please check your credentials.';
+    errorDiv.textContent = 'Invalid email or password. Try the demo credentials below.';
     errorDiv.style.display = 'block';
   }
 }

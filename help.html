@@ -26,8 +26,26 @@
           Back to Home
         </a>
       </div>
+      <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-menu-link" onclick="closeMobileMenu()">Home</a>
+    <a href="contact.html" class="mobile-menu-link" onclick="closeMobileMenu()">Contact</a>
+    <a href="login.html" class="mobile-menu-link">Sign In</a>
+    <a href="login.html?signup=true" class="btn btn-primary w-full mt-4">Get Started</a>
+    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--slate-200);">
+      <button class="theme-toggle" onclick="toggleTheme()" style="display: flex; align-items: center; gap: 0.5rem; width: 100%; padding: 0.75rem 1rem; border-radius: 0.5rem; background: var(--slate-100);">
+        <svg class="icon-md" id="sunIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--slate-600);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        <svg class="icon-md" id="moonIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--slate-300); display: none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        <span style="font-size: 0.875rem; font-weight: 500; color: var(--slate-700);">Toggle Theme</span>
+      </button>
+    </div>
+  </div>
 
   <!-- Page Header -->
   <section class="page-header">
@@ -155,8 +173,8 @@
 
       <div class="faq-list">
         <!-- FAQ 1 -->
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
             <span>What is JusConsultus AI?</span>
             <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
@@ -166,8 +184,8 @@
         </div>
 
         <!-- FAQ 2 -->
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
             <span>Is JusConsultus AI a substitute for legal advice?</span>
             <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
@@ -177,8 +195,8 @@
         </div>
 
         <!-- FAQ 3 -->
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
             <span>How current is your legal database?</span>
             <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
@@ -188,8 +206,8 @@
         </div>
 
         <!-- FAQ 4 -->
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
             <span>Can I use JusConsultus AI on mobile devices?</span>
             <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
@@ -199,8 +217,8 @@
         </div>
 
         <!-- FAQ 5 -->
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
             <span>What's included in the free tier?</span>
             <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
@@ -210,8 +228,8 @@
         </div>
 
         <!-- FAQ 6 -->
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
             <span>How do I cancel my subscription?</span>
             <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
@@ -221,8 +239,8 @@
         </div>
 
         <!-- FAQ 7 -->
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
             <span>How accurate is the AI assistant?</span>
             <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
@@ -232,8 +250,8 @@
         </div>
 
         <!-- FAQ 8 -->
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
             <span>Is my data secure?</span>
             <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>

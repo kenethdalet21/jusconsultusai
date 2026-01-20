@@ -3,19 +3,19 @@
 // Theme Toggle
 function toggleTheme() {
   const html = document.documentElement;
-  const sunIcon = document.getElementById('sunIcon');
-  const moonIcon = document.getElementById('moonIcon');
+  const sunIcons = document.querySelectorAll('#sunIcon');
+  const moonIcons = document.querySelectorAll('#moonIcon');
   
   if (html.classList.contains('dark')) {
     html.classList.remove('dark');
     localStorage.setItem('theme', 'light');
-    if (sunIcon) sunIcon.style.display = 'block';
-    if (moonIcon) moonIcon.style.display = 'none';
+    sunIcons.forEach(icon => icon.style.display = 'block');
+    moonIcons.forEach(icon => icon.style.display = 'none');
   } else {
     html.classList.add('dark');
     localStorage.setItem('theme', 'dark');
-    if (sunIcon) sunIcon.style.display = 'none';
-    if (moonIcon) moonIcon.style.display = 'block';
+    sunIcons.forEach(icon => icon.style.display = 'none');
+    moonIcons.forEach(icon => icon.style.display = 'block');
   }
 }
 
@@ -23,17 +23,17 @@ function toggleTheme() {
 function initTheme() {
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const sunIcon = document.getElementById('sunIcon');
-  const moonIcon = document.getElementById('moonIcon');
+  const sunIcons = document.querySelectorAll('#sunIcon');
+  const moonIcons = document.querySelectorAll('#moonIcon');
   
   if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
     document.documentElement.classList.add('dark');
-    if (sunIcon) sunIcon.style.display = 'none';
-    if (moonIcon) moonIcon.style.display = 'block';
+    sunIcons.forEach(icon => icon.style.display = 'none');
+    moonIcons.forEach(icon => icon.style.display = 'block');
   } else {
     document.documentElement.classList.remove('dark');
-    if (sunIcon) sunIcon.style.display = 'block';
-    if (moonIcon) moonIcon.style.display = 'none';
+    sunIcons.forEach(icon => icon.style.display = 'block');
+    moonIcons.forEach(icon => icon.style.display = 'none');
   }
 }
 
@@ -62,11 +62,18 @@ function validatePassword(password) {
   return password.length >= 8;
 }
 
+// Demo Users Database
+const DEMO_USERS = {
+  'test@jusconsultus.com': { password: 'testuser123', name: 'Test User', role: 'free', plan: 'Free Trial' },
+  'pro@jusconsultus.com': { password: 'prouser123', name: 'Pro User', role: 'pro', plan: 'Professional' },
+  'admin': { password: 'ChangeMe123!', name: 'Administrator', role: 'admin', plan: 'Enterprise' }
+};
+
 // Login Form Handler
 function handleLogin(e) {
   e.preventDefault();
   
-  const email = document.getElementById('email').value;
+  const email = document.getElementById('email').value.trim();
   const password = document.getElementById('password').value;
   const errorDiv = document.getElementById('error-message');
   const successDiv = document.getElementById('success-message');
@@ -75,8 +82,35 @@ function handleLogin(e) {
   if (errorDiv) errorDiv.style.display = 'none';
   if (successDiv) successDiv.style.display = 'none';
   
-  // Validate
-  if (!validateEmail(email)) {
+  // Check demo credentials
+  const user = DEMO_USERS[email] || DEMO_USERS[email.toLowerCase()];
+  
+  if (user && user.password === password) {
+    // Store user session in localStorage
+    const sessionData = {
+      email: email,
+      name: user.name,
+      role: user.role,
+      plan: user.plan,
+      loginTime: new Date().toISOString()
+    };
+    localStorage.setItem('jusconsultus_user', JSON.stringify(sessionData));
+    
+    // Show success message
+    if (successDiv) {
+      successDiv.textContent = 'Login successful! Redirecting to dashboard...';
+      successDiv.style.display = 'block';
+    }
+    
+    // Redirect to dashboard
+    setTimeout(() => {
+      window.location.href = 'dashboard.html';
+    }, 1000);
+    return;
+  }
+  
+  // Validate email format for non-demo users
+  if (!validateEmail(email) && email !== 'admin') {
     if (errorDiv) {
       errorDiv.textContent = 'Please enter a valid email address';
       errorDiv.style.display = 'block';
@@ -92,16 +126,11 @@ function handleLogin(e) {
     return;
   }
   
-  // Show success message (in a real app, this would make an API call)
-  if (successDiv) {
-    successDiv.textContent = 'Login successful! Redirecting...';
-    successDiv.style.display = 'block';
+  // Invalid credentials
+  if (errorDiv) {
+    errorDiv.textContent = 'Invalid email or password. Please check your credentials.';
+    errorDiv.style.display = 'block';
   }
-  
-  // Simulate redirect (in production, this would be handled after API response)
-  setTimeout(() => {
-    alert('This is a demo. In production, you would be redirected to the app.');
-  }, 1500);
 }
 
 // Signup Form Handler
@@ -109,9 +138,15 @@ function handleSignup(e) {
   e.preventDefault();
   
   const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const confirmPassword = document.getElementById('confirmPassword').value;
+  // Try signup-specific IDs first, fall back to generic IDs
+  const emailInput = document.getElementById('signup-email') || document.getElementById('email');
+  const passwordInput = document.getElementById('signup-password') || document.getElementById('password');
+  const confirmPasswordInput = document.getElementById('confirmPassword');
+  
+  const email = emailInput ? emailInput.value : '';
+  const password = passwordInput ? passwordInput.value : '';
+  const confirmPassword = confirmPasswordInput ? confirmPasswordInput.value : '';
+  
   const errorDiv = document.getElementById('error-message');
   const successDiv = document.getElementById('success-message');
   
@@ -207,19 +242,20 @@ function togglePasswordVisibility(inputId) {
 
 // FAQ Toggle
 function toggleFAQ(element) {
-  const answer = element.nextElementSibling;
-  const icon = element.querySelector('.faq-icon');
+  // Handle both clicking on .faq-question and .faq-item
+  const faqItem = element.classList.contains('faq-item') ? element : element.closest('.faq-item');
   
-  if (answer.style.maxHeight) {
-    answer.style.maxHeight = null;
-    answer.style.paddingTop = '0';
-    answer.style.paddingBottom = '0';
-    if (icon) icon.style.transform = 'rotate(0deg)';
-  } else {
-    answer.style.maxHeight = answer.scrollHeight + 'px';
-    answer.style.paddingTop = '1rem';
-    answer.style.paddingBottom = '1rem';
-    if (icon) icon.style.transform = 'rotate(180deg)';
+  if (faqItem) {
+    // Close other open FAQ items (accordion behavior)
+    const allFaqItems = document.querySelectorAll('.faq-item');
+    allFaqItems.forEach(item => {
+      if (item !== faqItem && item.classList.contains('active')) {
+        item.classList.remove('active');
+      }
+    });
+    
+    // Toggle current FAQ item
+    faqItem.classList.toggle('active');
   }
 }
 
@@ -250,6 +286,23 @@ function getURLParams() {
   };
 }
 
+// Logout Handler
+function handleLogout() {
+  localStorage.removeItem('jusconsultus_user');
+  window.location.href = 'login.html';
+}
+
+// Check if user is logged in
+function isLoggedIn() {
+  return localStorage.getItem('jusconsultus_user') !== null;
+}
+
+// Get current user data
+function getCurrentUser() {
+  const userData = localStorage.getItem('jusconsultus_user');
+  return userData ? JSON.parse(userData) : null;
+}
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
   initTheme();
@@ -269,7 +322,7 @@ document.addEventListener('click', function(e) {
   const hamburger = document.querySelector('.hamburger');
   
   if (mobileMenu && mobileMenu.classList.contains('active')) {
-    if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    if (!mobileMenu.contains(e.target) && (!hamburger || !hamburger.contains(e.target))) {
       closeMobileMenu();
     }
   }

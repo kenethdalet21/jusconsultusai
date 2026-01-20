@@ -1944,9 +1944,17 @@ body {
   transform: rotate(180deg);
 }
 
+/* Show toggle button only on desktop */
 @media (min-width: 1024px) {
   .sidebar-toggle {
     display: block;
+  }
+}
+
+/* Hide toggle button when sidebar is open on mobile */
+@media (max-width: 1023px) {
+  .sidebar.open .sidebar-toggle {
+    display: none;
   }
 }
 

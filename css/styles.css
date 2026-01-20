@@ -1782,9 +1782,108 @@ body {
   width: 5rem;
 }
 
+.sidebar.collapsed .sidebar-logo-text,
+.sidebar.collapsed .sidebar-new-btn span,
+.sidebar.collapsed .sidebar-item span,
+.sidebar.collapsed .sidebar-section-title,
+.sidebar.collapsed #recentChats,
+.sidebar.collapsed .query-usage,
+.sidebar.collapsed .sidebar-upgrade-btn span,
+.sidebar.collapsed .theme-toggle span,
+.sidebar.collapsed .sidebar-user > div:first-child {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-header {
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-logo {
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.sidebar.collapsed .sidebar-toggle {
+  position: absolute;
+  right: 0.5rem;
+  margin-left: 0;
+}
+
+.sidebar.collapsed .sidebar-new-btn .btn {
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.sidebar.collapsed .sidebar-item {
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.sidebar.collapsed .sidebar-item-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.sidebar.collapsed .sidebar-footer {
+  padding: 0.75rem;
+}
+
+.sidebar.collapsed .sidebar-user {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar.collapsed .sidebar-upgrade-btn {
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.sidebar.collapsed .theme-toggle {
+  justify-content: center;
+  padding: 0.75rem !important;
+}
+
+/* Tooltip for collapsed sidebar items */
+.sidebar.collapsed .sidebar-item {
+  position: relative;
+}
+
+.sidebar.collapsed .sidebar-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--slate-900);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.dark .sidebar.collapsed .sidebar-item::after {
+  background: var(--slate-700);
+}
+
+.sidebar.collapsed .sidebar-item:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .sidebar-header {
   padding: 1rem;
   border-bottom: 1px solid var(--slate-200);
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .dark .sidebar-header {
@@ -1830,9 +1929,19 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.25rem;
+  padding: 0.5rem;
   color: var(--slate-500);
   display: none;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+}
+
+.sidebar-toggle svg {
+  transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-toggle svg {
+  transform: rotate(180deg);
 }
 
 @media (min-width: 1024px) {
@@ -1959,6 +2068,65 @@ body {
 
 .dark .sidebar-user-email {
   color: var(--slate-400);
+}
+
+/* User Avatar (shown in collapsed state) */
+.sidebar-user-avatar {
+  display: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--primary-100);
+  color: var(--primary-600);
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.dark .sidebar-user-avatar {
+  background: rgba(99, 102, 241, 0.2);
+  color: var(--primary-400);
+}
+
+.sidebar.collapsed .sidebar-user-avatar {
+  display: flex;
+}
+
+.sidebar.collapsed .sidebar-user-info {
+  display: none;
+}
+
+/* Tooltip for user avatar */
+.sidebar-user-avatar::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--slate-900);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.dark .sidebar-user-avatar::after {
+  background: var(--slate-700);
+}
+
+.sidebar-user-avatar:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .sidebar-user-plan {

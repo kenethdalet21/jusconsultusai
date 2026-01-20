@@ -3,13 +3,13 @@
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR_FIREBASE_API_KEY",
-  authDomain: "jusconsultus-ai.firebaseapp.com",
-  projectId: "jusconsultus-ai",
-  storageBucket: "jusconsultus-ai.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
-  measurementId: "YOUR_MEASUREMENT_ID"
+  apiKey: "AIzaSyDeCo91gZ0flP_ufn6enO7Hq5B8f0-lclI",
+  authDomain: "jusconsultusai.firebaseapp.com",
+  projectId: "jusconsultusai",
+  storageBucket: "jusconsultusai.firebasestorage.app",
+  messagingSenderId: "319929102882",
+  appId: "1:319929102882:web:c4c775026876602018507b",
+  measurementId: "G-82TFMKPR77"
 };
 
 // Initialize Firebase (will be loaded from CDN in HTML)

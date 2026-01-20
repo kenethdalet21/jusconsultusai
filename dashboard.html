@@ -37,22 +37,26 @@
       <!-- Navigation -->
       <nav class="sidebar-nav">
         <div class="sidebar-nav-items">
-          <button class="sidebar-item active" data-page="chat" data-tooltip="Chat" onclick="navigateToPage('chat')">
+          <a href="dashboard.html" class="sidebar-item active" data-tooltip="Chat">
             <svg class="sidebar-item-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
             <span>Chat</span>
-          </button>
-          <button class="sidebar-item" data-page="legal-database" data-tooltip="Legal Database" onclick="navigateToPage('legal-database')">
+          </a>
+          <a href="legal-database.html" class="sidebar-item" data-tooltip="Legal Database">
             <svg class="sidebar-item-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
             <span>Legal Database</span>
-          </button>
-          <button class="sidebar-item" data-page="document-generator" data-tooltip="Document Generator" onclick="navigateToPage('document-generator')">
+          </a>
+          <a href="document-generator.html" class="sidebar-item" data-tooltip="Document Generator">
             <svg class="sidebar-item-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
             <span>Document Generator</span>
-          </button>
-          <button class="sidebar-item" data-page="bookmarks" data-tooltip="Bookmarks" onclick="navigateToPage('bookmarks')">
+          </a>
+          <a href="library.html" class="sidebar-item" data-tooltip="Library">
+            <svg class="sidebar-item-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            <span>Library</span>
+          </a>
+          <a href="bookmarks.html" class="sidebar-item" data-tooltip="Bookmarks">
             <svg class="sidebar-item-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
             <span>Bookmarks</span>
-          </button>
+          </a>
           <a href="help.html" class="sidebar-item" data-tooltip="Help Center">
             <svg class="sidebar-item-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span>Help Center</span>
@@ -87,10 +91,10 @@
         </button>
 
         <!-- Upgrade Button (shown for free users) -->
-        <button class="sidebar-upgrade-btn mb-3" id="upgradeBtn" onclick="showUpgradeModal()">
+        <a href="subscription.html" class="sidebar-upgrade-btn mb-3" id="upgradeBtn">
           <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
           <span>Upgrade to Pro</span>
-        </button>
+        </a>
 
         <!-- User Info -->
         <div class="sidebar-user">
@@ -109,7 +113,7 @@
           </div>
 
           <!-- Account Settings -->
-          <a href="#" class="sidebar-item" data-tooltip="Account Settings" onclick="showAccountSettings(); return false;">
+          <a href="profile.html" class="sidebar-item" data-tooltip="Account Settings">
             <svg class="sidebar-item-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             <span>Account Settings</span>
           </a>
@@ -628,36 +632,261 @@
       }
     }
 
+    // Get current mode
+    function getCurrentMode() {
+      const activeMode = document.querySelector('.mode-btn.active');
+      return activeMode ? activeMode.getAttribute('data-mode') : 'find';
+    }
+
+    // Get selected libraries
+    function getSelectedLibraries() {
+      const activeLibraries = [];
+      document.querySelectorAll('.library-btn.active').forEach(btn => {
+        activeLibraries.push(btn.getAttribute('data-library'));
+      });
+      return activeLibraries;
+    }
+
     function sendMessage() {
       const input = document.getElementById('chatInput');
       const message = input.value.trim();
       if (!message) return;
 
+      // Check query limit
+      if (!canMakeQuery()) {
+        showUpgradeModal();
+        return;
+      }
+
       // Add user message
       addChatMessage(message, 'user');
       input.value = '';
+
+      // Increment query usage
+      incrementQueryUsage();
+      updateQueryUsageDisplay();
+
+      // Get current mode
+      const mode = getCurrentMode();
+      const isDeepThink = document.getElementById('deepThinkToggle').classList.contains('active');
 
       // Show typing indicator
       const typingIndicator = document.createElement('div');
       typingIndicator.className = 'chat-message assistant typing-indicator';
       typingIndicator.id = 'typing-indicator';
-      typingIndicator.innerHTML = '<div class="chat-bubble" style="display: flex; align-items: center; gap: 0.5rem;"><svg class="icon animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"></circle><path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg><span style="color: var(--slate-600);" class="dark-text-white-60">Searching legal database...</span></div>';
+      
+      const searchingTexts = [
+        'Searching legal database...',
+        'Analyzing Philippine laws...',
+        'Reviewing jurisprudence...',
+        'Processing your query...'
+      ];
+      const searchText = searchingTexts[Math.floor(Math.random() * searchingTexts.length)];
+      
+      typingIndicator.innerHTML = `<div class="chat-bubble" style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg class="icon animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"></circle>
+          <path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span style="color: var(--slate-600);" class="dark-text-white-60">${searchText}</span>
+      </div>`;
+      
       document.getElementById('chatMessages').appendChild(typingIndicator);
       document.getElementById('chatMessages').scrollTop = document.getElementById('chatMessages').scrollHeight;
 
-      // Simulate AI response with deep think
+      // Simulate AI response with streaming effect
+      const thinkingTime = isDeepThink ? 2500 : 1500;
+      
       setTimeout(() => {
         // Remove typing indicator
         const indicator = document.getElementById('typing-indicator');
         if (indicator) indicator.remove();
 
-        // Add AI response
-        const response = 'I\'m currently running in demo mode. In the full version, I would search through Philippine laws, jurisprudence, and legal issuances to provide you with accurate, cited information about: "' + message + '"';
-        addChatMessage(response, 'assistant');
+        // Generate AI response using the helper function from main.js
+        const { response, searchResults } = generateAIResponse(message, mode);
+        
+        // Add AI response with streaming effect
+        addChatMessageWithStreaming(response, 'assistant', isDeepThink, searchResults);
         
         // Store assistant message for answers tab
         assistantMessages.push(response);
-      }, 1500);
+        
+        // Update search panel if results exist
+        if (searchResults && searchResults.length > 0) {
+          updateSearchPanel(searchResults);
+        }
+      }, thinkingTime);
+    }
+
+    // Add message with streaming effect
+    function addChatMessageWithStreaming(content, role, isDeepThink, searchResults) {
+      const container = document.getElementById('chatMessages');
+      
+      // Remove welcome message if present
+      if (container.querySelector('[style*="text-align: center"]')) {
+        container.innerHTML = '';
+      }
+
+      const messageDiv = document.createElement('div');
+      messageDiv.className = 'chat-message ' + role;
+      
+      let html = '<div class="chat-bubble">';
+      
+      if (isDeepThink) {
+        const reasoningText = generateReasoningText();
+        html += `
+          <div style="border-bottom: 1px solid var(--slate-200); padding-bottom: 0.75rem; margin-bottom: 0.75rem;" class="dark-border-white-10">
+            <button onclick="toggleReasoning(this)" style="display: flex; align-items: center; gap: 0.5rem; width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 0.5rem; border-radius: 0.5rem;" onmouseover="this.style.background='var(--slate-100)'" onmouseout="this.style.background='transparent'">
+              <svg style="width: 1rem; height: 1rem; color: var(--purple-500);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+              <span style="font-size: 0.75rem; font-weight: 500; color: var(--purple-600);" class="dark-text-purple-400">Deep Think Reasoning (click to expand)</span>
+              <svg style="width: 1rem; height: 1rem; color: var(--purple-400);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+              <svg class="reasoning-chevron" style="width: 1rem; height: 1rem; color: var(--slate-400); margin-left: auto; transition: transform 0.2s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="reasoning-content" style="display: none; padding: 0.75rem; font-size: 0.75rem; color: var(--slate-600); background: rgba(147, 51, 234, 0.05); border-radius: 0.5rem; max-height: 12rem; overflow-y: auto; white-space: pre-wrap; margin-top: 0.5rem;">
+${reasoningText}
+            </div>
+          </div>
+        `;
+      }
+      
+      // Convert markdown-style formatting to HTML
+      const formattedContent = formatMarkdown(content);
+      html += `<div class="response-content">${formattedContent}</div>`;
+      
+      // Add action buttons
+      html += `
+        <div style="display: flex; gap: 0.5rem; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--slate-200);">
+          <button onclick="copyResponse(this)" class="btn btn-ghost btn-sm" title="Copy">
+            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          </button>
+          <button onclick="bookmarkResponse(this)" class="btn btn-ghost btn-sm" title="Bookmark">
+            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+          </button>
+          <button onclick="regenerateResponse()" class="btn btn-ghost btn-sm" title="Regenerate">
+            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          </button>
+        </div>
+      `;
+      
+      html += '</div>';
+      messageDiv.innerHTML = html;
+      container.appendChild(messageDiv);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    // Generate reasoning text for Deep Think
+    function generateReasoningText() {
+      const steps = [
+        "Step 1: Parsing query and identifying legal concepts...",
+        "Step 2: Searching Philippine legal database (Laws, Cases, Issuances)...",
+        "Step 3: Cross-referencing with Supreme Court jurisprudence...",
+        "Step 4: Analyzing relevant provisions and precedents...",
+        "Step 5: Formulating comprehensive response with citations...",
+        "Step 6: Verifying accuracy and completeness..."
+      ];
+      return steps.join('\n\n');
+    }
+
+    // Format markdown to HTML
+    function formatMarkdown(text) {
+      return text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/\n\n/g, '</p><p>')
+        .replace(/\n/g, '<br>')
+        .replace(/^/, '<p>')
+        .replace(/$/, '</p>');
+    }
+
+    // Update search panel with results
+    function updateSearchPanel(results) {
+      const panel = document.getElementById('searchPanelContent');
+      const countBadge = document.getElementById('searchResultsCount');
+      
+      if (results && results.length > 0) {
+        countBadge.textContent = results.length;
+        countBadge.style.display = 'inline';
+        
+        let html = '<div style="padding: 1rem;">';
+        results.forEach((doc, idx) => {
+          html += `
+            <div class="search-result-item" onclick="viewDocument('${doc.id}', '${doc.title.replace(/'/g, "\\'")}')">
+              <div class="search-result-icon">
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </div>
+              <div class="search-result-content">
+                <div class="search-result-title">${doc.title}</div>
+                <div class="search-result-meta">${doc.type} • ${doc.category}</div>
+              </div>
+              <button class="btn btn-ghost btn-sm" onclick="event.stopPropagation(); bookmarkItem('${doc.id}', '${doc.title.replace(/'/g, "\\'")}', '${doc.type}')">
+                <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+              </button>
+            </div>
+          `;
+        });
+        html += '</div>';
+        panel.innerHTML = html;
+      } else {
+        countBadge.style.display = 'none';
+        panel.innerHTML = `
+          <div style="text-align: center; padding: 2rem; color: var(--slate-400);">
+            <svg style="width: 3rem; height: 3rem; margin: 0 auto 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <p>No results found. Try a different query.</p>
+          </div>
+        `;
+      }
+    }
+
+    // Action button handlers
+    function copyResponse(btn) {
+      const content = btn.closest('.chat-bubble').querySelector('.response-content').innerText;
+      navigator.clipboard.writeText(content).then(() => {
+        showToast('Response copied to clipboard', 'success');
+      });
+    }
+
+    function bookmarkResponse(btn) {
+      const content = btn.closest('.chat-bubble').querySelector('.response-content').innerText;
+      addBookmark({
+        type: 'response',
+        title: content.substring(0, 50) + '...',
+        content: content,
+        category: 'research'
+      });
+      showToast('Response bookmarked!', 'success');
+    }
+
+    function regenerateResponse() {
+      showToast('Regenerating response...', 'info');
+    }
+
+    function bookmarkItem(id, title, type) {
+      addBookmark({
+        type: type.toLowerCase(),
+        title: title,
+        documentId: id,
+        category: 'laws'
+      });
+      showToast('Item bookmarked!', 'success');
+    }
+
+    // Update query usage display
+    function updateQueryUsageDisplay() {
+      const remaining = getRemainingQueries();
+      const queriesUsed = document.getElementById('queriesUsed');
+      const queriesLimit = document.getElementById('queriesLimit');
+      const usageFill = document.getElementById('queryUsageFill');
+      
+      if (remaining === 'Unlimited') {
+        if (queriesUsed) queriesUsed.textContent = '∞';
+        if (queriesLimit) queriesLimit.textContent = '∞';
+        if (usageFill) usageFill.style.width = '0%';
+      } else {
+        const usage = getQueryUsage();
+        if (queriesUsed) queriesUsed.textContent = usage.count;
+        if (queriesLimit) queriesLimit.textContent = FREE_QUERY_LIMIT;
+        if (usageFill) usageFill.style.width = ((usage.count / FREE_QUERY_LIMIT) * 100) + '%';
+      }
     }
 
     function addChatMessage(content, role) {
@@ -673,33 +902,9 @@
       
       if (role === 'user') {
         messageDiv.innerHTML = '<div class="chat-bubble">' + content + '</div>';
-      } else {
-        // Assistant message with potential deep think section
-        const isDeepThinkActive = document.getElementById('deepThinkToggle').classList.contains('active');
-        let html = '<div class="chat-bubble">';
-        
-        if (isDeepThinkActive) {
-          html += `
-            <div style="border-bottom: 1px solid var(--slate-200); padding-bottom: 0.75rem; margin-bottom: 0.75rem;" class="dark-border-white-10">
-              <button onclick="toggleReasoning(this)" style="display: flex; align-items: center; gap: 0.5rem; width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 0.5rem; border-radius: 0.5rem;" onmouseover="this.style.background='var(--slate-100)'" onmouseout="this.style.background='transparent'">
-                <svg style="width: 1rem; height: 1rem; color: var(--purple-500);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-                <span style="font-size: 0.75rem; font-weight: 500; color: var(--purple-600);" class="dark-text-purple-400">Deep Think Reasoning</span>
-                <svg style="width: 1rem; height: 1rem; color: var(--purple-400);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-                <svg class="reasoning-chevron" style="width: 1rem; height: 1rem; color: var(--slate-400); margin-left: auto;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </button>
-              <div class="reasoning-content" style="display: none; padding: 0.75rem; font-size: 0.75rem; color: var(--slate-600); background: rgba(147, 51, 234, 0.05); border-radius: 0.5rem; max-height: 12rem; overflow-y: auto; white-space: pre-wrap;">
-Analyzing legal context and relevant jurisprudence... Considering applicable laws and precedents... Formulating comprehensive response based on Philippine legal framework...
-              </div>
-            </div>
-          `;
-        }
-        
-        html += content + '</div>';
-        messageDiv.innerHTML = html;
+        container.appendChild(messageDiv);
+        container.scrollTop = container.scrollHeight;
       }
-      
-      container.appendChild(messageDiv);
-      container.scrollTop = container.scrollHeight;
     }
 
     function toggleReasoning(btn) {
@@ -744,6 +949,58 @@ Analyzing legal context and relevant jurisprudence... Considering applicable law
 
     function hideUpgradeModal() {
       document.getElementById('upgradeModal').style.display = 'none';
+    }
+
+    // View document in a modal
+    function viewDocument(id, title) {
+      // Get document content from SAMPLE_LEGAL_DATA
+      const allDocs = [...(SAMPLE_LEGAL_DATA?.laws || []), ...(SAMPLE_LEGAL_DATA?.cases || []), ...(SAMPLE_LEGAL_DATA?.issuances || [])];
+      const doc = allDocs.find(d => d.id === id);
+      
+      let modalHtml = `
+        <div id="documentViewerModal" style="position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.5); padding: 1rem;">
+          <div style="background: white; border-radius: 1rem; max-width: 48rem; width: 100%; max-height: 90vh; overflow: hidden; display: flex; flex-direction: column;" class="dark-bg-slate-900">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--slate-200);">
+              <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--slate-900);" class="dark-text-white">${title}</h2>
+              <button onclick="closeDocumentViewer()" style="padding: 0.5rem; border-radius: 0.5rem; background: transparent; border: none; cursor: pointer;">
+                <svg style="width: 1.5rem; height: 1.5rem; color: var(--slate-500);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+            <div style="flex: 1; overflow-y: auto; padding: 1.5rem;">
+              ${doc ? `
+                <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--slate-200);">
+                  <span style="display: inline-block; padding: 0.25rem 0.75rem; background: var(--primary-100); color: var(--primary-700); border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">${doc.category || doc.type}</span>
+                  ${doc.date ? `<span style="margin-left: 0.5rem; font-size: 0.875rem; color: var(--slate-500);">${doc.date}</span>` : ''}
+                </div>
+                <div style="font-size: 0.9375rem; line-height: 1.75; color: var(--slate-700);" class="dark-text-slate-300">
+                  <p>${doc.description || doc.summary || 'No preview available for this document.'}</p>
+                  <p style="margin-top: 1rem; font-style: italic; color: var(--slate-500);">Full document content would be loaded from the legal database.</p>
+                </div>
+              ` : `
+                <p style="color: var(--slate-600);">Document preview not available.</p>
+              `}
+            </div>
+            <div style="display: flex; gap: 0.75rem; padding: 1.25rem 1.5rem; border-top: 1px solid var(--slate-200); background: var(--slate-50);" class="dark-bg-slate-800">
+              <button onclick="bookmarkItem('${id}', '${title.replace(/'/g, "\\'")}', 'law')" class="btn btn-secondary" style="flex: 1;">
+                <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                Bookmark
+              </button>
+              <button onclick="closeDocumentViewer()" class="btn btn-primary" style="flex: 1;">Close</button>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      // Remove existing modal if any
+      closeDocumentViewer();
+      
+      // Add modal to body
+      document.body.insertAdjacentHTML('beforeend', modalHtml);
+    }
+
+    function closeDocumentViewer() {
+      const modal = document.getElementById('documentViewerModal');
+      if (modal) modal.remove();
     }
 
     // Initialize on load

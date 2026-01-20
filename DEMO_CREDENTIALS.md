@@ -2,52 +2,82 @@
 
 ## 🔐 Demo Account Information
 
-This is a static demo website. The following credentials are for the **full application** when running locally.
+This is a **fully functional static demo website** using localStorage for data persistence. No backend required.
 
 ---
 
-## 👤 User App Demo Accounts
+## 👤 Demo Login Accounts
 
-**Full App URL:** `http://localhost:3000/login`
+**Login URL:** Open `login.html` in browser
 
 ### Test User Accounts
 
-All test accounts are pre-configured and exempt from payment setup.
-
 | Account Type | Email | Password | Plan | Features |
 |-------------|-------|----------|------|----------|
-| **Free User** | test@jusconsultus.com | testuser123 | Free (50 queries) | Basic legal search, limited AI queries |
-| **Pro User** | pro@jusconsultus.com | prouser123 | Pro (unlimited) | Full AI assistant, document generator, all features |
-| **Special User** | kdtuazon21@gmail.com | kreeden_27 | Pro | Admin access to Legal Database |
+| **Free User** | test@jusconsultus.com | test123 | Free | 50 queries/day, basic features |
+| **Pro User** | pro@jusconsultus.com | pro123 | Pro (unlimited) | Unlimited queries, Deep Think, all features |
+| **Admin** | admin | admin | Admin | Full admin access, unlimited everything |
 
 ---
 
-## 🔐 Admin App Login
+## ✨ Features Implemented
 
-**Full App URL:** `http://localhost:3001/login`
+### AI Chat Dashboard (`dashboard.html`)
+- ✅ Streaming AI responses with typing effect
+- ✅ Deep Think mode with expandable reasoning
+- ✅ Legal research panel integration
+- ✅ Query usage tracking (50/day for Free users)
+- ✅ Chat history management
+- ✅ Document viewer modal
 
-### Admin Account
-| Field | Value |
-|-------|-------|
-| Username | admin |
-| Password | ChangeMe123! |
-| Email | admin@jusconsultus.ai |
-| Role | superadmin |
+### Legal Database (`legal-database.html`)
+- ✅ Full-text search across sample legal data
+- ✅ Filter by category (Laws, Cases, Treaties, etc.)
+- ✅ Document viewer with full details
+- ✅ Bookmark integration
+- ✅ Toast notifications
 
-**Admin Features:**
-- Full admin dashboard access
-- User management
-- Payment/subscription management
-- Legal database management
-- Site content management
-- Analytics and statistics
+### Document Generator (`document-generator.html`)
+- ✅ 10+ legal document templates
+- ✅ AI-assisted document generation
+- ✅ Query limit enforcement for Free users
+- ✅ Download as DOCX/TXT
+- ✅ Auto-save to library
+
+### Library (`library.html`)
+- ✅ File upload support
+- ✅ Generated documents integration
+- ✅ Download files with actual content
+- ✅ Delete with confirmation
+- ✅ Category organization
+
+### Bookmarks (`bookmarks.html`)
+- ✅ Save cases, laws, documents
+- ✅ Folder organization
+- ✅ Category filtering
+- ✅ Quick view and edit
+- ✅ Content preview
+
+### Profile & Subscription (`profile.html`, `subscription.html`)
+- ✅ Profile editing with localStorage persistence
+- ✅ Real-time query usage display
+- ✅ Plan upgrade/downgrade simulation
+- ✅ Delete account with full cleanup
 
 ---
 
-## 📱 Google OAuth
+## 💾 LocalStorage Keys
 
-The full application supports Google OAuth sign-in:
-1. Click "Sign in with Google" on login page
+| Key | Purpose |
+|-----|---------|
+| `jusconsultus_user` | Current user session data |
+| `jusconsultus_bookmarks` | Saved bookmarks |
+| `jusconsultus_library` | Uploaded files |
+| `jusconsultus_chat_history` | AI chat messages |
+| `jusconsultus_query_usage` | Daily query count |
+| `jusconsultus_generated_docs` | AI-generated documents |
+
+---
 2. Complete Google authentication
 3. Automatically creates account in database
 

@@ -267,9 +267,13 @@
                 <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                 Clear
               </button>
-              <button class="btn btn-primary" onclick="downloadDocument()">
-                <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                Download
+              <button class="btn btn-primary" onclick="downloadAsWord()">
+                <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                Download Word
+              </button>
+              <button class="btn btn-primary" onclick="downloadAsPDF()">
+                <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                Download PDF
               </button>
             </div>
           </div>
@@ -288,7 +292,7 @@
 
           <!-- Editor Area -->
           <div class="editor-content" id="editorContent" contenteditable="true">
-            <p style="text-align: center; color: var(--slate-400); padding: 2rem;">
+            <p style="text-align: center; color: var(--slate-400); margin: 2rem 0;">
               Select a template from the left panel or start typing to create your document.
             </p>
           </div>
@@ -558,12 +562,27 @@
 
     .editor-content {
       flex: 1;
-      padding: 2rem;
+      padding: 1.2in 1in 1in 1.5in;
       overflow-y: auto;
-      font-family: 'Arial', sans-serif;
-      font-size: 14px;
-      line-height: 1.5;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 14pt;
+      line-height: 1;
       outline: none;
+      background: white;
+      max-width: 8.5in;
+      min-height: 13in;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .editor-content p {
+      margin: 0 0 1.5em 0;
+      line-height: 1;
+    }
+    .editor-content h1,
+    .editor-content h2,
+    .editor-content h3 {
+      line-height: 1;
+      margin: 0 0 1.5em 0;
     }
     .editor-content:focus {
       outline: none;
@@ -797,19 +816,47 @@
       }
     }
 
-    // Download document
-    function downloadDocument() {
+    // Download as Word document (SC Paper Rule compliant)
+    function downloadAsWord() {
       const title = document.getElementById('documentTitle').value || 'document';
       const content = document.getElementById('editorContent').innerHTML;
       
-      // Create a simple HTML document for download
-      const html = `<!DOCTYPE html>
-<html>
+      // Create Word-compatible HTML with SC Paper Rule formatting
+      const wordHTML = `
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
 <head>
-<meta charset="UTF-8">
+<meta charset='utf-8'>
 <title>${title}</title>
+<xml>
+<w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>100</w:Zoom>
+</w:WordDocument>
+</xml>
 <style>
-body { font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5; max-width: 8.5in; margin: 1in auto; padding: 0 1.5in 1in 1.5in; }
+@page {
+  size: 8.5in 13in;
+  margin: 1.2in 1in 1in 1.5in;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14pt;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0 0 1.5em 0;
+  line-height: 1;
+  text-align: justify;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  margin: 0 0 1.5em 0;
+}
+ul, ol {
+  margin: 0 0 1.5em 0;
+}
 </style>
 </head>
 <body>
@@ -817,11 +864,11 @@ ${content}
 </body>
 </html>`;
 
-      const blob = new Blob([html], { type: 'text/html' });
+      const blob = new Blob([wordHTML], { type: 'application/msword' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `${title}.html`;
+      a.download = `${title}.doc`;
       a.click();
       URL.revokeObjectURL(url);
       
@@ -834,7 +881,91 @@ ${content}
         createdAt: new Date().toISOString()
       });
       
-      showToast('Document downloaded and saved to library!', 'success');
+      showToast('Document downloaded as Word (.doc) with SC Paper Rule formatting!', 'success');
+    }
+
+    // Download as PDF (SC Paper Rule compliant)
+    function downloadAsPDF() {
+      const title = document.getElementById('documentTitle').value || 'document';
+      const content = document.getElementById('editorContent').innerHTML;
+      
+      // Create a printable window with SC Paper Rule formatting
+      const printWindow = window.open('', '', 'width=800,height=600');
+      printWindow.document.write(`
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${title}</title>
+<style>
+@page {
+  size: 8.5in 13in;
+  margin: 1.2in 1in 1in 1.5in;
+}
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .page-number:after {
+    counter-increment: page;
+    content: counter(page);
+  }
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14pt;
+  line-height: 1;
+  margin: 0;
+  padding: 1.2in 1in 1in 1.5in;
+  background: white;
+  width: 8.5in;
+  min-height: 13in;
+}
+p {
+  margin: 0 0 1.5em 0;
+  line-height: 1;
+  text-align: justify;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  margin: 0 0 1.5em 0;
+}
+ul, ol {
+  margin: 0 0 1.5em 0;
+}
+.page-number {
+  position: fixed;
+  bottom: 0.5in;
+  right: 1in;
+  font-size: 12pt;
+}
+</style>
+</head>
+<body>
+${content}
+<div class="page-number"></div>
+</body>
+</html>`);
+      
+      printWindow.document.close();
+      
+      // Wait for content to load then print
+      setTimeout(() => {
+        printWindow.print();
+        printWindow.close();
+      }, 500);
+      
+      // Save to generated documents
+      saveGeneratedDocument({
+        id: Date.now().toString(),
+        title: title,
+        content: content,
+        type: 'document',
+        createdAt: new Date().toISOString()
+      });
+      
+      showToast('Opening print dialog for PDF export with SC Paper Rule formatting...', 'info');
     }
 
     // Generate with AI
@@ -911,7 +1042,7 @@ ${content}
         response = response.replace(/\[([^\]]+)\]/g, '<span style="background: rgba(99, 102, 241, 0.2); padding: 0.125rem 0.25rem; border-radius: 0.25rem; color: var(--primary-600);">[$1]</span>');
         
         document.getElementById('documentTitle').value = 'AI Generated Document';
-        document.getElementById('editorContent').innerHTML = `<div style="font-family: 'Times New Roman', Times, serif; font-size: 12pt; line-height: 1.5;">${response}</div>`;
+        document.getElementById('editorContent').innerHTML = response;
         updateWordCount();
 
         btn.innerHTML = '<svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg> Generate with AI';

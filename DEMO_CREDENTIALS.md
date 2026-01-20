@@ -16,8 +16,8 @@ All test accounts are pre-configured and exempt from payment setup.
 
 | Account Type | Email | Password | Plan | Features |
 |-------------|-------|----------|------|----------|
-| **Free User** | test@jusconsultus.com | test123 | Free (50 queries) | Basic legal search, limited AI queries |
-| **Pro User** | pro@jusconsultus.com | pro123 | Pro (unlimited) | Full AI assistant, document generator, all features |
+| **Free User** | test@jusconsultus.com | testuser123 | Free (50 queries) | Basic legal search, limited AI queries |
+| **Pro User** | pro@jusconsultus.com | prouser123 | Pro (unlimited) | Full AI assistant, document generator, all features |
 | **Special User** | kdtuazon21@gmail.com | kreeden_27 | Pro | Admin access to Legal Database |
 
 ---

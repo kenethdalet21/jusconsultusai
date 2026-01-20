@@ -1747,8 +1747,15 @@ body {
 .sidebar.collapsed .query-usage,
 .sidebar.collapsed .sidebar-upgrade-btn span,
 .sidebar.collapsed .theme-toggle span,
-.sidebar.collapsed .sidebar-user > div:first-child {
+.sidebar.collapsed .sidebar-user > div:first-child,
+.sidebar.collapsed .sidebar-user-name,
+.sidebar.collapsed .sidebar-user-email,
+.sidebar.collapsed .sidebar-user-plan {
   display: none;
+}
+
+.sidebar.collapsed .sidebar-user-avatar {
+  margin: 0 auto;
 }
 
 .sidebar.collapsed .sidebar-header {

@@ -672,16 +672,6 @@
       border-color: rgba(255, 255, 255, 0.1);
     }
 
-    /* Hide sidebar toggle on desktop - sidebar is frozen */
-    @media (min-width: 1024px) {
-      .sidebar-toggle {
-        display: none !important;
-      }
-      .sidebar {
-        position: fixed !important;
-      }
-    }
-
     @media (max-width: 1023px) {
       #mobileHeader {
         display: block !important;
@@ -691,6 +681,19 @@
       }
       .main-content {
         padding-top: 56px;
+      }
+      .sidebar.collapsed ~ .main-content {
+        margin-left: 5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .main-content {
+        margin-left: 18rem;
+        transition: margin-left 0.3s ease;
+      }
+      .sidebar.collapsed ~ .main-content {
+        margin-left: 5rem;
       }
     }
 
@@ -720,22 +723,29 @@
         document.getElementById('userEmail').textContent = user.email;
       }
       
+      // Auto-collapse sidebar for document generator to maximize editor space
+      const sidebar = document.getElementById('sidebar');
+      if (sidebar && window.innerWidth >= 1024) {
+        sidebar.classList.add('collapsed');
+      }
+      
       // Initialize word count
       updateWordCount();
       document.getElementById('editorContent').addEventListener('input', updateWordCount);
     });
 
-    // Sidebar toggle - Disabled on document generator page
+    // Sidebar toggle
     function toggleSidebar() {
-      // Only allow toggle on mobile
       const sidebar = document.getElementById('sidebar');
       const overlay = document.getElementById('sidebarOverlay');
       
       if (window.innerWidth < 1024) {
         sidebar.classList.toggle('open');
         overlay.classList.toggle('active');
+      } else {
+        sidebar.classList.toggle('collapsed');
+        document.querySelector('.main-content').classList.toggle('expanded');
       }
-      // Desktop sidebar is frozen on document generator page
     }
 
     // Switch mode

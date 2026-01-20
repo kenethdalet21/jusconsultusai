@@ -1079,6 +1079,19 @@ body {
 
 .hidden { display: none; }
 
+/* Dark mode text utilities */
+.dark-text-white { }
+.dark .dark-text-white { color: white; }
+
+.dark-text-white-60 { }
+.dark .dark-text-white-60 { color: rgba(255, 255, 255, 0.6); }
+
+.dark-text-purple-400 { }
+.dark .dark-text-purple-400 { color: #c084fc; }
+
+.dark-border-white-10 { }
+.dark .dark-border-white-10 { border-color: rgba(255, 255, 255, 0.1); }
+
 @media (min-width: 768px) {
   .md-flex { display: flex; }
   .md-hidden { display: none; }
@@ -2210,6 +2223,70 @@ body {
 .dark .chat-message.assistant .chat-bubble {
   background: rgba(255, 255, 255, 0.1);
   color: white;
+}
+
+/* Typing indicator animation */
+.typing-indicator .chat-bubble {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Answers Container */
+.answers-container {
+  flex-direction: column;
+}
+
+.dark .answers-container {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+/* Generator Container */
+.generator-container {
+  flex-direction: column;
+}
+
+.dark .generator-container {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+/* Reasoning section styles */
+.reasoning-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-300) transparent;
+}
+
+.reasoning-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.reasoning-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.reasoning-content::-webkit-scrollbar-thumb {
+  background-color: var(--primary-300);
+  border-radius: 3px;
+}
+
+.dark .reasoning-content {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Transition effects */
+.reasoning-chevron {
+  transition: transform 0.2s ease;
 }
 
 .chat-input-area {

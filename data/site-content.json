@@ -1,0 +1,829 @@
+{
+  "hero": {
+    "badge": "AI-Powered Philippine Legal Research",
+    "title": "Experience Faster, Smarter",
+    "titleHighlight": "Legal Research",
+    "description": "JusConsultus AI is an AI-powered legal research platform made for Philippine lawyers, legal practitioners, academicians, and law students. Conduct 75% faster legal research with cutting-edge AI features."
+  },
+  "stats": [
+    {
+      "value": "500K+",
+      "label": "Legal Documents"
+    },
+    {
+      "value": "75%",
+      "label": "Faster Research"
+    },
+    {
+      "value": "1K+",
+      "label": "Active Users"
+    },
+    {
+      "value": "99.9%",
+      "label": "Accuracy Rate"
+    }
+  ],
+  "features": [
+    {
+      "icon": "Search",
+      "title": "Intelligent Search",
+      "description": "Advanced AI-powered search through Philippine jurisprudence, laws, and legal issuances."
+    },
+    {
+      "icon": "Brain",
+      "title": "AI Legal Assistant",
+      "description": "Ask complex legal questions and get comprehensive, cited answers instantly."
+    },
+    {
+      "icon": "FileText",
+      "title": "Document Drafting",
+      "description": "Generate legal documents, pleadings, and contracts with AI assistance."
+    },
+    {
+      "icon": "BookOpen",
+      "title": "Case Digest",
+      "description": "Automatically summarize and digest Supreme Court decisions and legal materials."
+    },
+    {
+      "icon": "Database",
+      "title": "Comprehensive Library",
+      "description": "Access to complete Philippine legal database including laws, jurisprudence, and issuances."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Smart Citations",
+      "description": "Automatic citation formatting and cross-referencing of legal authorities."
+    }
+  ],
+  "userTypes": [
+    {
+      "icon": "Briefcase",
+      "title": "Lawyers",
+      "description": "Streamline your legal research and case preparation"
+    },
+    {
+      "icon": "Building2",
+      "title": "Law Firms",
+      "description": "Enterprise solutions for collaborative research"
+    },
+    {
+      "icon": "GraduationCap",
+      "title": "Law Students",
+      "description": "Ace your studies with comprehensive legal resources"
+    },
+    {
+      "icon": "Users",
+      "title": "Academicians",
+      "description": "Support your legal scholarship and teaching"
+    }
+  ],
+  "pricing": {
+    "heading": "Simple, Transparent Pricing",
+    "subheading": "Choose the plan that fits your legal research needs",
+    "plans": {
+      "free": {
+        "name": "Free Trial",
+        "price": "₱0",
+        "period": "/7 days",
+        "description": "Perfect for getting started",
+        "features": [
+          "5 queries per day",
+          "Basic legal search",
+          "Access to public laws",
+          "Standard response time",
+          "Community support"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "monthlyPrice": "₱688",
+        "annualPrice": "₱488",
+        "annualSavings": "Save ₱2,400/year",
+        "description": "Professional",
+        "features": [
+          "Unlimited queries",
+          "Advanced AI legal assistant",
+          "Full jurisprudence access",
+          "Document generator",
+          "Priority support",
+          "Case digest automation",
+          "Deep Think reasoning mode"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "description": "For law firms & organizations",
+        "features": [
+          "Everything in Pro",
+          "Unlimited team members",
+          "Custom integrations",
+          "Dedicated account manager",
+          "On-premise deployment option",
+          "SLA guarantee",
+          "Training & onboarding"
+        ],
+        "contactEmail": "enterprise@jusconsultus.ai"
+      }
+    }
+  },
+  "about": {
+    "heading": "About JusConsultus AI",
+    "paragraphs": [
+      "JusConsultus AI is a cutting-edge legal technology platform designed specifically for the Philippine legal system. Our mission is to democratize access to legal information and empower legal professionals with AI-powered research tools.",
+      "Founded by a team of legal professionals and technology experts, we understand the challenges faced by lawyers, law students, and legal researchers in navigating the vast landscape of Philippine jurisprudence, laws, and legal issuances.",
+      "Our platform combines the latest advances in artificial intelligence with a comprehensive database of Philippine legal resources to deliver fast, accurate, and reliable legal research results."
+    ],
+    "stats": [
+      {
+        "value": "2025",
+        "label": "Founded"
+      },
+      {
+        "value": "1K+",
+        "label": "Legal Professionals"
+      },
+      {
+        "value": "500K+",
+        "label": "Legal Documents"
+      },
+      {
+        "value": "99.9%",
+        "label": "Uptime"
+      }
+    ],
+    "values": [
+      {
+        "title": "Accuracy",
+        "description": "We prioritize accuracy in all legal information we provide, ensuring citations and references are verified.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Accessibility",
+        "description": "We believe legal information should be accessible to everyone, not just those who can afford expensive research tools.",
+        "icon": "🌍"
+      },
+      {
+        "title": "Innovation",
+        "description": "We continuously improve our AI models and features to stay at the forefront of legal technology.",
+        "icon": "💡"
+      },
+      {
+        "title": "Privacy",
+        "description": "We protect your research queries and data with enterprise-grade security measures.",
+        "icon": "🔒"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Ready to Transform Your Legal Research?",
+    "description": "Join thousands of Philippine legal professionals who are already using JusConsultus AI to conduct faster, smarter legal research."
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "subtitle": "Your privacy is important to us. This policy explains how JusConsultus AI collects, uses, and protects your personal information.",
+    "lastUpdated": "January 4, 2026",
+    "contactTitle": "Questions About Your Privacy?",
+    "contactDescription": "If you have any questions or concerns about our privacy practices, please don't hesitate to contact our Data Protection Officer.",
+    "sections": [
+      {
+        "id": "information-collection",
+        "icon": "Database",
+        "title": "Information We Collect",
+        "content": [
+          {
+            "subtitle": "Personal Information",
+            "text": "When you create an account, we collect your name, email address, and contact information. For premium subscriptions, we also collect billing information through our secure payment processors."
+          },
+          {
+            "subtitle": "Usage Data",
+            "text": "We automatically collect information about how you interact with our platform, including search queries, documents accessed, and feature usage patterns. This helps us improve our services and provide personalized recommendations."
+          },
+          {
+            "subtitle": "Device Information",
+            "text": "We collect device identifiers, browser type, IP address, and operating system information to ensure platform security and optimize performance."
+          }
+        ]
+      },
+      {
+        "id": "data-usage",
+        "icon": "Eye",
+        "title": "How We Use Your Data",
+        "content": [
+          {
+            "subtitle": "Service Provision",
+            "text": "Your data is used to provide, maintain, and improve JusConsultus AI services, including our AI-powered legal research features, document drafting assistance, and case digest functionalities."
+          },
+          {
+            "subtitle": "AI Model Improvement",
+            "text": "Anonymized and aggregated usage data may be used to improve our AI models and search algorithms. Your specific legal queries and research patterns are never shared with third parties or used to train external AI systems."
+          },
+          {
+            "subtitle": "Communication",
+            "text": "We may use your email to send important service updates, security alerts, and if you opt-in, marketing communications about new features and legal industry insights."
+          }
+        ]
+      },
+      {
+        "id": "data-protection",
+        "icon": "Lock",
+        "title": "Data Protection & Security",
+        "content": [
+          {
+            "subtitle": "Encryption",
+            "text": "All data transmitted between your device and our servers is encrypted using industry-standard TLS 1.3 encryption. Data at rest is encrypted using AES-256 encryption."
+          },
+          {
+            "subtitle": "Access Controls",
+            "text": "We implement strict access controls and authentication mechanisms. Only authorized personnel with a legitimate business need can access user data, and all access is logged and audited."
+          },
+          {
+            "subtitle": "Regular Audits",
+            "text": "We conduct regular security assessments and vulnerability testing to ensure our systems remain secure against evolving threats."
+          }
+        ]
+      },
+      {
+        "id": "data-sharing",
+        "icon": "Globe",
+        "title": "Data Sharing & Third Parties",
+        "content": [
+          {
+            "subtitle": "Service Providers",
+            "text": "We work with trusted third-party service providers for payment processing, analytics, and infrastructure. These providers are contractually obligated to protect your data and can only use it for specified purposes."
+          },
+          {
+            "subtitle": "Legal Requirements",
+            "text": "We may disclose your information if required by law, court order, or government request, or to protect the rights, property, or safety of JusConsultus AI, our users, or others."
+          },
+          {
+            "subtitle": "No Selling of Data",
+            "text": "We do not sell, rent, or trade your personal information to third parties for their marketing purposes."
+          }
+        ]
+      },
+      {
+        "id": "user-rights",
+        "icon": "UserCheck",
+        "title": "Your Rights",
+        "content": [
+          {
+            "subtitle": "Access & Portability",
+            "text": "You have the right to access your personal data and request a copy in a portable format. Contact our support team to request your data."
+          },
+          {
+            "subtitle": "Correction",
+            "text": "You can update or correct your personal information at any time through your account settings or by contacting us."
+          },
+          {
+            "subtitle": "Deletion",
+            "text": "You have the right to request deletion of your account and personal data, subject to legal retention requirements. Upon request, we will delete your data within 30 days."
+          },
+          {
+            "subtitle": "Opt-Out",
+            "text": "You can opt-out of marketing communications at any time by clicking the unsubscribe link in our emails or updating your preferences in account settings."
+          }
+        ]
+      },
+      {
+        "id": "cookies",
+        "icon": "Bell",
+        "title": "Cookies & Tracking",
+        "content": [
+          {
+            "subtitle": "Essential Cookies",
+            "text": "We use essential cookies to maintain your session, remember your preferences, and ensure the platform functions properly. These cannot be disabled."
+          },
+          {
+            "subtitle": "Analytics Cookies",
+            "text": "With your consent, we use analytics cookies to understand how users interact with our platform, helping us identify areas for improvement."
+          },
+          {
+            "subtitle": "Cookie Management",
+            "text": "You can manage cookie preferences through your browser settings. Note that disabling certain cookies may affect platform functionality."
+          }
+        ]
+      },
+      {
+        "id": "data-retention",
+        "icon": "Trash2",
+        "title": "Data Retention",
+        "content": [
+          {
+            "subtitle": "Active Accounts",
+            "text": "We retain your personal information for as long as your account is active or as needed to provide services to you."
+          },
+          {
+            "subtitle": "After Account Deletion",
+            "text": "After account deletion, we may retain certain information for up to 90 days for backup and disaster recovery purposes, after which it is permanently deleted."
+          },
+          {
+            "subtitle": "Legal Requirements",
+            "text": "Some data may be retained longer if required by law or for legitimate business purposes such as resolving disputes or enforcing agreements."
+          }
+        ]
+      }
+    ]
+  },
+  "termsOfService": {
+    "title": "Terms of Service",
+    "subtitle": "Please read these terms carefully before using JusConsultus AI. By using our platform, you agree to be bound by these terms.",
+    "lastUpdated": "January 4, 2026",
+    "contactTitle": "Questions About Our Terms?",
+    "contactDescription": "If you have any questions about these Terms of Service, please contact our legal team for clarification.",
+    "sections": [
+      {
+        "id": "acceptance",
+        "icon": "FileText",
+        "title": "Acceptance of Terms",
+        "content": [
+          {
+            "subtitle": "Agreement to Terms",
+            "text": "By accessing or using JusConsultus AI, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this platform."
+          },
+          {
+            "subtitle": "Eligibility",
+            "text": "You must be at least 18 years old to use JusConsultus AI. By using this platform, you represent and warrant that you are at least 18 years of age and have the legal capacity to enter into this agreement."
+          },
+          {
+            "subtitle": "Account Registration",
+            "text": "To access certain features, you must register for an account. You agree to provide accurate, current, and complete information during registration and to update such information to keep it accurate, current, and complete."
+          }
+        ]
+      },
+      {
+        "id": "services",
+        "icon": "Scale",
+        "title": "Service Description",
+        "content": [
+          {
+            "subtitle": "Platform Overview",
+            "text": "JusConsultus AI is an AI-powered legal research platform designed for Philippine legal professionals, academicians, and law students. Our services include legal database search, AI-assisted research, document drafting tools, and case digest features."
+          },
+          {
+            "subtitle": "AI-Generated Content",
+            "text": "Our AI features provide assistance and suggestions based on legal databases and algorithms. AI-generated content is for informational purposes only and should not be considered as legal advice. Users should verify all AI outputs and consult with qualified legal professionals for specific legal matters."
+          },
+          {
+            "subtitle": "Service Availability",
+            "text": "We strive to maintain platform availability but do not guarantee uninterrupted access. We may perform maintenance, updates, or modifications that temporarily affect service availability."
+          }
+        ]
+      },
+      {
+        "id": "subscriptions",
+        "icon": "CreditCard",
+        "title": "Subscriptions & Payments",
+        "content": [
+          {
+            "subtitle": "Subscription Plans",
+            "text": "JusConsultus AI offers free and premium subscription plans. Premium plans provide additional features, higher usage limits, and priority support. Detailed plan features are available on our pricing page."
+          },
+          {
+            "subtitle": "Billing",
+            "text": "Premium subscriptions are billed in advance on a monthly or annual basis depending on your selected plan. All fees are quoted in Philippine Pesos (PHP) unless otherwise stated."
+          },
+          {
+            "subtitle": "Automatic Renewal",
+            "text": "Subscriptions automatically renew at the end of each billing period unless cancelled before the renewal date. You may cancel your subscription at any time through your account settings."
+          },
+          {
+            "subtitle": "Refund Policy",
+            "text": "Annual subscriptions are eligible for a full refund within 7 days of initial purchase if no premium features have been substantially used. Monthly subscriptions are non-refundable. Contact support for refund requests."
+          }
+        ]
+      },
+      {
+        "id": "usage",
+        "icon": "AlertTriangle",
+        "title": "Acceptable Use",
+        "content": [
+          {
+            "subtitle": "Permitted Use",
+            "text": "You may use JusConsultus AI for lawful legal research, education, and professional purposes. The platform is intended to assist legal professionals and students in their work and studies."
+          },
+          {
+            "subtitle": "Prohibited Activities",
+            "text": "You may not: (a) use the platform for any illegal purpose; (b) attempt to gain unauthorized access to our systems; (c) interfere with platform operations; (d) scrape or harvest data without permission; (e) share account credentials; (f) resell or redistribute our services without authorization."
+          },
+          {
+            "subtitle": "Usage Limits",
+            "text": "Each subscription tier has specific usage limits for AI queries, searches, and document generation. Exceeding these limits may result in temporary restrictions or require upgrading to a higher tier."
+          }
+        ]
+      },
+      {
+        "id": "intellectual-property",
+        "icon": "Copyright",
+        "title": "Intellectual Property",
+        "content": [
+          {
+            "subtitle": "Platform Content",
+            "text": "The JusConsultus AI platform, including its design, features, and proprietary content, is owned by JusConsultus AI and protected by intellectual property laws. You may not copy, modify, or distribute our proprietary content without permission."
+          },
+          {
+            "subtitle": "Legal Database Content",
+            "text": "Legal documents, jurisprudence, and laws accessed through our platform are generally in the public domain. However, our organization, presentation, and AI-enhanced summaries of such content are proprietary."
+          },
+          {
+            "subtitle": "User Content",
+            "text": "You retain ownership of any content you upload to the platform. By uploading content, you grant us a limited license to process and store such content to provide our services."
+          }
+        ]
+      },
+      {
+        "id": "disclaimers",
+        "icon": "Gavel",
+        "title": "Disclaimers & Limitations",
+        "content": [
+          {
+            "subtitle": "No Legal Advice",
+            "text": "JusConsultus AI is a research tool, not a law firm or legal advisor. Content provided through the platform, including AI-generated responses, does not constitute legal advice and should not be relied upon as such."
+          },
+          {
+            "subtitle": "Accuracy of Information",
+            "text": "While we strive for accuracy, we do not warrant that all information is complete, current, or error-free. Legal information may change, and AI systems may occasionally produce inaccurate outputs. Users are responsible for verifying information."
+          },
+          {
+            "subtitle": "Limitation of Liability",
+            "text": "To the maximum extent permitted by law, JusConsultus AI shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the platform."
+          }
+        ]
+      },
+      {
+        "id": "termination",
+        "icon": "UserX",
+        "title": "Termination",
+        "content": [
+          {
+            "subtitle": "User Termination",
+            "text": "You may terminate your account at any time by contacting support or using the account deletion feature. Upon termination, your access to premium features will end immediately."
+          },
+          {
+            "subtitle": "Platform Termination",
+            "text": "We reserve the right to suspend or terminate your account for violations of these terms, fraudulent activity, or any conduct that may harm the platform or other users."
+          },
+          {
+            "subtitle": "Effect of Termination",
+            "text": "Upon termination, your right to use the platform ceases immediately. We may retain certain data as required by law or for legitimate business purposes as outlined in our Privacy Policy."
+          }
+        ]
+      },
+      {
+        "id": "changes",
+        "icon": "RefreshCw",
+        "title": "Changes to Terms",
+        "content": [
+          {
+            "subtitle": "Modifications",
+            "text": "We reserve the right to modify these Terms of Service at any time. Material changes will be notified via email or through the platform at least 30 days before taking effect."
+          },
+          {
+            "subtitle": "Continued Use",
+            "text": "Your continued use of JusConsultus AI after any changes to these terms constitutes your acceptance of the new terms. If you do not agree to the modified terms, you should discontinue use of the platform."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have questions or need assistance? We're here to help. Reach out to our support team and we'll get back to you as soon as possible.",
+    "successMessage": "Thank you for reaching out. We'll get back to you within 24 hours.",
+    "contactMethods": [
+      {
+        "icon": "Mail",
+        "title": "Email Support",
+        "description": "Get help via email",
+        "value": "kdrt092191@gmail.com",
+        "action": "mailto:kdrt092191@gmail.com"
+      },
+      {
+        "icon": "Phone",
+        "title": "Phone Support",
+        "description": "Mon-Fri, 9AM-6PM PHT",
+        "value": "+63 9757477099",
+        "action": "tel:"
+      },
+      {
+        "icon": "MessageSquare",
+        "title": "Live Chat",
+        "description": "Available 24/7",
+        "value": "Start a conversation",
+        "action": "#chat"
+      }
+    ],
+    "categories": [
+      {
+        "value": "general",
+        "label": "General Inquiry"
+      },
+      {
+        "value": "technical",
+        "label": "Technical Support"
+      },
+      {
+        "value": "billing",
+        "label": "Billing & Subscription"
+      },
+      {
+        "value": "feedback",
+        "label": "Feedback & Suggestions"
+      },
+      {
+        "value": "partnership",
+        "label": "Partnership & Business"
+      },
+      {
+        "value": "legal",
+        "label": "Legal & Compliance"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do I reset my password?",
+        "answer": "Go to the login page and click \"Forgot Password\". Enter your email address and follow the instructions sent to your inbox."
+      },
+      {
+        "question": "How do I cancel my subscription?",
+        "answer": "You can cancel your subscription anytime from your Account Settings. Your access will continue until the end of your billing period."
+      },
+      {
+        "question": "Is my data secure?",
+        "answer": "Yes, we use industry-standard encryption and security measures. Read our Privacy Policy for detailed information about data protection."
+      },
+      {
+        "question": "Can I get a refund?",
+        "answer": "Annual plans are eligible for a full refund within 7 days of purchase. Monthly subscriptions are non-refundable. Contact support for assistance."
+      }
+    ],
+    "office": {
+      "title": "Office Location",
+      "address": "Zone 1 Apple Street, Pengue, Tuguegarao City, 3500",
+      "hours": "Monday - Friday: 9:00 AM - 6:00 PM PHT\nSaturday: 9:00 AM - 12:00 PM PHT\nSunday: Closed"
+    }
+  },
+  "helpCenter": {
+    "title": "How can we help you?",
+    "subtitle": "Find answers, learn best practices, and get the most out of JusConsultus AI",
+    "tabs": [
+      {
+        "id": "guides",
+        "label": "Guides"
+      },
+      {
+        "id": "faqs",
+        "label": "FAQs"
+      },
+      {
+        "id": "tips",
+        "label": "Quick Tips"
+      },
+      {
+        "id": "contact",
+        "label": "Contact Support"
+      }
+    ],
+    "guides": [
+      {
+        "id": "search",
+        "icon": "Search",
+        "title": "How to Write a Good Query",
+        "description": "Learn to use natural language queries and filters effectively",
+        "introduction": "Writing effective queries helps you find the most relevant legal information quickly. Follow these best practices for optimal results.",
+        "sections": [
+          {
+            "title": "Be Specific and Clear",
+            "tips": [
+              {
+                "text": "Use precise legal terms instead of general words",
+                "good": "What are the requirements for filing an annulment under Article 36?",
+                "bad": "How to end marriage?"
+              },
+              {
+                "text": "Include relevant details like article numbers, case names, or law titles",
+                "good": "G.R. No. 221697 Republic vs. Manalo foreign divorce",
+                "bad": "divorce case"
+              }
+            ]
+          },
+          {
+            "title": "Use Proper Legal Citations",
+            "tips": [
+              {
+                "text": "Include case numbers in the format G.R. No. XXXXXX",
+                "good": "G.R. No. 188169 chain of custody",
+                "bad": "that drug case"
+              },
+              {
+                "text": "Reference specific laws with their full names or numbers",
+                "good": "Republic Act 9262 VAWC protective orders",
+                "bad": "violence against women law"
+              }
+            ]
+          },
+          {
+            "title": "Search Strategies",
+            "tips": [
+              {
+                "text": "Use quotation marks for exact phrases",
+                "good": "\"psychological incapacity\" requirements",
+                "bad": "psychological incapacity requirements"
+              },
+              {
+                "text": "Combine multiple search terms for better precision",
+                "good": "labor code illegal dismissal just causes",
+                "bad": "dismissal"
+              },
+              {
+                "text": "Filter by document type (Law, Jurisprudence, Issuance)",
+                "good": "Use filters to search only in Supreme Court decisions",
+                "bad": "Searching everything at once"
+              }
+            ],
+            "mistakes": [
+              "Using too many words - keep queries concise",
+              "Being too vague - add specific details",
+              "Ignoring filters - use type and year filters",
+              "Not using legal terminology - learn key terms"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "assistant",
+        "icon": "MessageSquare",
+        "title": "Using the AI Assistant",
+        "description": "Get the most out of AI-powered legal research",
+        "introduction": "The AI assistant helps you understand complex legal concepts and find relevant information.",
+        "sections": [
+          {
+            "title": "Ask Clear Questions",
+            "tips": [
+              {
+                "text": "Frame questions in complete sentences",
+                "good": "What are the grounds for legal separation in the Philippines?",
+                "bad": "legal separation"
+              },
+              {
+                "text": "Provide context for better answers",
+                "good": "Under the Revised Penal Code, what is the penalty for qualified theft?",
+                "bad": "theft penalty"
+              }
+            ]
+          },
+          {
+            "title": "Understanding Responses",
+            "tips": [
+              {
+                "text": "AI responses include citations to primary sources",
+                "good": "Check the cited cases and laws for full context",
+                "bad": "Relying solely on AI summary"
+              },
+              {
+                "text": "Use follow-up questions to clarify complex points",
+                "good": "Can you explain the exceptions to this rule?",
+                "bad": "ok thanks"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "library",
+        "icon": "BookOpen",
+        "title": "Library Navigation",
+        "description": "Browse and filter through the legal database",
+        "introduction": "The Legal Library contains thousands of Philippine legal documents organized by category.",
+        "sections": [
+          {
+            "title": "Using Categories",
+            "tips": [
+              {
+                "text": "Browse by document type: Republic Acts, Jurisprudence, Executive Orders",
+                "good": "Click a category to see all documents in that type",
+                "bad": ""
+              },
+              {
+                "text": "Use year filters to find recent or historical documents",
+                "good": "Filter Supreme Court decisions from 2020-2024",
+                "bad": "Scrolling through all results"
+              }
+            ]
+          },
+          {
+            "title": "Advanced Filtering",
+            "tips": [
+              {
+                "text": "Combine multiple filters for precise results",
+                "good": "Republic Acts + Year 2023 + Search \"data privacy\"",
+                "bad": "Using only one filter"
+              },
+              {
+                "text": "Toggle between local database, SC Website, and E-Library sources",
+                "good": "Enable all sources for comprehensive coverage",
+                "bad": "Limiting to one source only"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "drafting",
+        "icon": "FileText",
+        "title": "Document Drafting",
+        "description": "Create legal documents with templates",
+        "introduction": "Use the Document Generator to create professional legal documents from templates.",
+        "sections": [
+          {
+            "title": "Using Templates",
+            "tips": [
+              {
+                "text": "Select a template that matches your document type",
+                "good": "Use the Affidavit template for sworn statements",
+                "bad": "Starting from scratch every time"
+              },
+              {
+                "text": "Fill in placeholders marked with brackets [Name], [Date], etc.",
+                "good": "Replace all bracketed fields with actual information",
+                "bad": "Leaving placeholders in final document"
+              }
+            ]
+          },
+          {
+            "title": "Formatting Tools",
+            "tips": [
+              {
+                "text": "Use the toolbar for text formatting (bold, italic, alignment)",
+                "good": "Format headers and important sections properly",
+                "bad": "Plain text throughout"
+              },
+              {
+                "text": "Preview your document before downloading",
+                "good": "Check formatting and content accuracy",
+                "bad": "Downloading without review"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How accurate is the AI legal assistant?",
+        "answer": "Our AI is trained on verified Philippine legal sources and provides cited answers. However, always verify important information with primary sources and consult licensed attorneys for legal advice."
+      },
+      {
+        "question": "What sources are included in the database?",
+        "answer": "We include Supreme Court decisions from 1901 to present, all Republic Acts, Commonwealth Acts, Presidential Decrees, Executive Orders, Administrative Orders, and various government issuances. We also integrate with the Supreme Court E-Library for real-time access."
+      },
+      {
+        "question": "Can I use this for actual legal practice?",
+        "answer": "Yes, but JusConsultus AI is a research tool designed to assist legal professionals and students. It should not replace professional legal judgment. Legal advice should still be provided by licensed attorneys after thorough review."
+      },
+      {
+        "question": "How often is the database updated?",
+        "answer": "Our database is updated weekly with new Supreme Court decisions and monthly with new legislation and issuances. The Supreme Court E-Library integration provides real-time access to the latest decisions."
+      },
+      {
+        "question": "Is my search history private?",
+        "answer": "Yes, your search history and bookmarks are stored locally and privately. We do not share your search queries or research activity with third parties."
+      },
+      {
+        "question": "What are the query limits?",
+        "answer": "Free users have a limit of 20 queries per day. Pro subscribers enjoy unlimited queries, advanced search features, and priority support."
+      },
+      {
+        "question": "Can I export or save documents?",
+        "answer": "Yes, you can bookmark important documents for quick access, and use the Document Generator to export your work as PDF or Word documents."
+      },
+      {
+        "question": "How do I cite sources from JusConsultus?",
+        "answer": "Always cite the original source (e.g., Supreme Court decision, Republic Act number). JusConsultus provides the proper citations for each document in our database."
+      }
+    ],
+    "tips": [
+      "Use specific legal terms for more accurate results",
+      "Include case numbers like \"G.R. No.\" for direct matches",
+      "Use quotation marks for exact phrase matching",
+      "Filter by document type to narrow down results",
+      "Save frequently used searches with bookmarks",
+      "Enable multiple sources (Local DB, SC Website, E-Library) for comprehensive coverage",
+      "Check the year filters to find the most recent jurisprudence",
+      "Use the AI assistant for explanations of complex legal concepts",
+      "Start with broader searches, then refine with filters",
+      "Review cited sources directly for complete context"
+    ],
+    "contactSupport": {
+      "title": "Get in Touch",
+      "description": "Need more help? Our support team is here to assist you with any questions or issues.",
+      "emailTitle": "Email Support",
+      "emailAddress": "support@jusconsultus.ai",
+      "chatTitle": "Live Chat",
+      "chatDescription": "Available 9AM - 6PM PHT",
+      "responseTimeTitle": "Response Time",
+      "responseTimeDescription": "We typically respond to all inquiries within 24 hours during business days. For urgent matters, please mark your email as \"Urgent\" in the subject line."
+    }
+  },
+  "updatedAt": "2026-01-04T06:26:52.329Z"
+}

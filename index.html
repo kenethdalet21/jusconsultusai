@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JusConsultus AI - Philippine Legal Research Platform</title>
+  <meta name="description" content="AI-powered legal research platform for Philippine lawyers, legal practitioners, academicians, law students, and professors. Experience faster, smarter, and trustworthy legal research.">
+  <meta name="keywords" content="Philippine law, legal research, AI, jurisprudence, Supreme Court decisions, legal database, law students, lawyers">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body class="bg-gradient-main">
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="JusConsultus" width="28" height="28">
+        <span class="nav-logo-text">JusConsultus AI</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="login.html" class="btn btn-ghost">Sign In</a>
+        <a href="login.html?signup=true" class="btn btn-primary">
+          Get Started
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+      <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features" class="mobile-menu-link" onclick="closeMobileMenu()">Features</a>
+    <a href="#pricing" class="mobile-menu-link" onclick="closeMobileMenu()">Pricing</a>
+    <a href="#about" class="mobile-menu-link" onclick="closeMobileMenu()">About</a>
+    <a href="login.html" class="mobile-menu-link">Sign In</a>
+    <a href="login.html?signup=true" class="btn btn-primary w-full mt-4">Get Started</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-effect hero-bg-1"></div>
+    <div class="hero-bg-effect hero-bg-2"></div>
+    
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span class="hero-badge-text">AI-Powered Philippine Legal Research</span>
+        <svg class="icon" fill="currentColor" viewBox="0 0 24 24" style="color: #f59e0b"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+      </div>
+      
+      <h1 class="hero-title">
+        Experience Faster, Smarter<br>
+        <span class="hero-title-highlight">Legal Research</span>
+      </h1>
+      
+      <p class="hero-description">
+        JusConsultus AI is an AI-powered legal research platform made for Philippine lawyers, legal practitioners, academicians, and law students. Conduct 75% faster legal research with cutting-edge AI features.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="login.html?signup=true" class="btn btn-primary">
+          Start Researching
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <a href="login.html" class="btn btn-secondary">
+          Sign In
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">500K+</div>
+          <div class="stat-label">Legal Documents</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">75%</div>
+          <div class="stat-label">Faster Research</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">1K+</div>
+          <div class="stat-label">Active Users</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">99.9%</div>
+          <div class="stat-label">Accuracy Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Types Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-heading text-center">Built for Legal Professionals</h2>
+      <p class="section-subheading text-center mb-12">
+        Whether you're a practicing lawyer, law student, or legal academician, JusConsultus AI has the tools you need.
+      </p>
+      
+      <div class="grid-4">
+        <!-- Lawyers -->
+        <div class="card card-hover p-6 text-center">
+          <div class="feature-icon-lg mx-auto mb-4" style="margin: 0 auto 1rem;">
+            <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-600)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">Lawyers</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600);">Streamline your legal research and case preparation</p>
+        </div>
+        
+        <!-- Law Firms -->
+        <div class="card card-hover p-6 text-center">
+          <div class="feature-icon-lg mx-auto mb-4" style="margin: 0 auto 1rem;">
+            <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-600)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">Law Firms</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600);">Enterprise solutions for collaborative research</p>
+        </div>
+        
+        <!-- Law Students -->
+        <div class="card card-hover p-6 text-center">
+          <div class="feature-icon-lg mx-auto mb-4" style="margin: 0 auto 1rem;">
+            <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-600)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
+          </div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">Law Students</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600);">Ace your studies with comprehensive legal resources</p>
+        </div>
+        
+        <!-- Academicians -->
+        <div class="card card-hover p-6 text-center">
+          <div class="feature-icon-lg mx-auto mb-4" style="margin: 0 auto 1rem;">
+            <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-600)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">Academicians</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600);">Support your legal scholarship and teaching</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section section-alt">
+    <div class="container">
+      <div class="text-center mb-12">
+        <div class="tag tag-primary mb-4" style="display: inline-flex;">
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span>Powerful Features</span>
+        </div>
+        <h2 class="section-heading">Powerful Features for Legal Excellence</h2>
+        <p class="section-subheading">
+          Leverage cutting-edge AI technology to transform your legal research workflow
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Feature 1 -->
+        <div class="card-elevated p-6">
+          <div class="feature-icon mb-4">
+            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">Intelligent Search</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.625;">Advanced AI-powered search through Philippine jurisprudence, laws, and legal issuances.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="card-elevated p-6">
+          <div class="feature-icon mb-4">
+            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">AI Legal Assistant</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.625;">Ask complex legal questions and get comprehensive, cited answers instantly.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="card-elevated p-6">
+          <div class="feature-icon mb-4">
+            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">Document Drafting</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.625;">Generate legal documents, pleadings, and contracts with AI assistance.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="card-elevated p-6">
+          <div class="feature-icon mb-4">
+            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">Case Digest</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.625;">Automatically summarize and digest Supreme Court decisions and legal materials.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="card-elevated p-6">
+          <div class="feature-icon mb-4">
+            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+          </div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">Comprehensive Library</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.625;">Access to complete Philippine legal database including laws, jurisprudence, and issuances.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="card-elevated p-6">
+          <div class="feature-icon mb-4">
+            <svg class="icon-lg" fill="currentColor" viewBox="0 0 24 24"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/></svg>
+          </div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">Smart Citations</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.625;">Automatic citation formatting and cross-referencing of legal authorities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="section-heading">How JusConsultus AI Works</h2>
+        <p class="section-subheading">Get started in three simple steps</p>
+      </div>
+
+      <div class="grid-3" style="position: relative;">
+        <div class="step-connector"></div>
+        
+        <div class="text-center" style="position: relative;">
+          <div class="step-number">1</div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">Ask Your Question</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.625;">Type your legal question or search query in natural language</p>
+        </div>
+        
+        <div class="text-center" style="position: relative;">
+          <div class="step-number">2</div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">AI Analysis</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.625;">Our AI searches through comprehensive Philippine legal database</p>
+        </div>
+        
+        <div class="text-center" style="position: relative;">
+          <div class="step-number">3</div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.5rem;">Get Results</h3>
+          <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.625;">Receive accurate, cited answers with relevant legal authorities</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="grid-2" style="gap: 3rem; align-items: center;">
+        <div>
+          <div class="tag tag-emerald mb-4" style="display: inline-flex;">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Why Choose Us</span>
+          </div>
+          <h2 class="section-heading mb-6">Why Choose JusConsultus AI?</h2>
+          
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="benefit-item">
+              <div class="benefit-icon" style="background: linear-gradient(135deg, #f59e0b, #f97316);">
+                <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <div>
+                <div class="benefit-title">75% Faster Research</div>
+                <div class="benefit-desc">Dramatically reduce time spent on legal research</div>
+              </div>
+            </div>
+            
+            <div class="benefit-item">
+              <div class="benefit-icon" style="background: linear-gradient(135deg, #10b981, #14b8a6);">
+                <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <div>
+                <div class="benefit-title">Authoritative Sources</div>
+                <div class="benefit-desc">Access verified Philippine legal authorities</div>
+              </div>
+            </div>
+            
+            <div class="benefit-item">
+              <div class="benefit-icon" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
+                <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <div class="benefit-title">24/7 Availability</div>
+                <div class="benefit-desc">Research anytime, anywhere with cloud access</div>
+              </div>
+            </div>
+            
+            <div class="benefit-item">
+              <div class="benefit-icon" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">
+                <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <div class="benefit-title">Accurate Citations</div>
+                <div class="benefit-desc">AI-verified citations and cross-references</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-elevated p-8" style="background: linear-gradient(135deg, white, var(--slate-50));">
+          <div class="text-center">
+            <div style="width: 4rem; height: 4rem; margin: 0 auto 1.5rem; border-radius: 1rem; background: linear-gradient(135deg, var(--primary-100), var(--primary-200)); display: flex; align-items: center; justify-content: center; box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);">
+              <img src="images/logo.png" alt="JusConsultus" width="40" height="40">
+            </div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--slate-900); margin-bottom: 1rem;">Comprehensive Legal Library</h3>
+            <ul class="list-check" style="list-style: none; text-align: left;">
+              <li>
+                <span class="list-check-icon"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+                Supreme Court Decisions
+              </li>
+              <li>
+                <span class="list-check-icon"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+                Republic Acts & Laws
+              </li>
+              <li>
+                <span class="list-check-icon"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+                Executive Issuances
+              </li>
+              <li>
+                <span class="list-check-icon"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+                Administrative Orders
+              </li>
+              <li>
+                <span class="list-check-icon"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+                Court of Appeals Decisions
+              </li>
+              <li>
+                <span class="list-check-icon"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+                Legal Opinions & Circulars
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <div class="text-center mb-12">
+        <div class="tag tag-amber mb-4" style="display: inline-flex;">
+          <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+          <span>Pricing Plans</span>
+        </div>
+        <h2 class="section-heading">Simple, Transparent Pricing</h2>
+        <p class="section-subheading">Choose the plan that fits your legal research needs</p>
+      </div>
+
+      <div class="grid-3" style="max-width: 64rem; margin: 0 auto;">
+        <!-- Free Plan -->
+        <div class="card-elevated pricing-card">
+          <div class="text-center mb-6">
+            <div class="tag tag-emerald mb-3" style="display: inline-flex;">7 Days Free Trial</div>
+            <h3 class="pricing-name">Free Trial</h3>
+            <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.25rem;">
+              <span class="pricing-amount" style="color: var(--slate-900);">₱0</span>
+              <span class="pricing-period">/7 days</span>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--slate-500); margin-top: 0.5rem;">Perfect for getting started</p>
+          </div>
+          <div class="divider mb-5"></div>
+          <ul style="list-style: none; margin-bottom: 1.5rem;">
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              5 queries per day
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Basic legal search
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Access to public laws
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Standard response time
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Community support
+            </li>
+          </ul>
+          <a href="login.html?signup=true" class="btn btn-secondary w-full">Get Started Free</a>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="card-elevated pricing-card pricing-card-featured">
+          <div class="pricing-badge">✨ Most Popular</div>
+          <div class="text-center mb-6 mt-2">
+            <div class="tag tag-primary mb-3" style="display: inline-flex;">Professional</div>
+            <h3 class="pricing-name">Pro</h3>
+            <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.25rem;">
+              <span class="pricing-amount hero-title-highlight">₱488</span>
+              <span class="pricing-period">/month</span>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--primary-600); margin-top: 0.25rem; font-weight: 600;">Billed annually (Save ₱2,400/year)</p>
+            <p style="font-size: 0.625rem; color: var(--slate-500); margin-top: 0.125rem;">or ₱688/month billed monthly</p>
+          </div>
+          <div class="divider mb-5"></div>
+          <ul style="list-style: none; margin-bottom: 1.5rem;">
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Unlimited queries
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Advanced AI legal assistant
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Full jurisprudence access
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Document generator
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Priority support
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Case digest automation
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg class="icon-sm" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Deep Think reasoning mode
+            </li>
+          </ul>
+          <a href="login.html?signup=true&plan=pro" class="btn btn-primary w-full">Start Pro Trial</a>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="card-elevated pricing-card">
+          <div class="text-center mb-6">
+            <div class="tag tag-amber mb-3" style="display: inline-flex;">Enterprise</div>
+            <h3 class="pricing-name">Enterprise</h3>
+            <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.25rem;">
+              <span class="pricing-amount" style="background: linear-gradient(to right, #d97706, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Custom</span>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--slate-500); margin-top: 0.5rem;">For law firms & organizations</p>
+          </div>
+          <div class="divider mb-5"></div>
+          <ul style="list-style: none; margin-bottom: 1.5rem;">
+            <li class="pricing-feature">
+              <span class="pricing-check" style="background: rgba(245, 158, 11, 0.1);"><svg class="icon-sm" fill="none" stroke="#d97706" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Everything in Pro
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" style="background: rgba(245, 158, 11, 0.1);"><svg class="icon-sm" fill="none" stroke="#d97706" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Unlimited team members
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" style="background: rgba(245, 158, 11, 0.1);"><svg class="icon-sm" fill="none" stroke="#d97706" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Custom integrations
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" style="background: rgba(245, 158, 11, 0.1);"><svg class="icon-sm" fill="none" stroke="#d97706" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Dedicated account manager
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" style="background: rgba(245, 158, 11, 0.1);"><svg class="icon-sm" fill="none" stroke="#d97706" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              On-premise deployment option
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" style="background: rgba(245, 158, 11, 0.1);"><svg class="icon-sm" fill="none" stroke="#d97706" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              SLA guarantee
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" style="background: rgba(245, 158, 11, 0.1);"><svg class="icon-sm" fill="none" stroke="#d97706" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+              Training & onboarding
+            </li>
+          </ul>
+          <a href="mailto:enterprise@jusconsultus.ai" class="btn btn-outline w-full">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section section-alt">
+    <div class="container">
+      <div class="grid-2" style="gap: 3rem; align-items: center;">
+        <div>
+          <div class="tag tag-primary mb-4" style="display: inline-flex;">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>About Us</span>
+          </div>
+          <h2 class="section-heading mb-6">About JusConsultus AI</h2>
+          <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem; color: var(--slate-600); line-height: 1.75;">
+            <p>JusConsultus AI is a cutting-edge legal technology platform designed specifically for the Philippine legal system. Our mission is to democratize access to legal information and empower legal professionals with AI-powered research tools.</p>
+            <p>Founded by a team of legal professionals and technology experts, we understand the challenges faced by lawyers, law students, and legal researchers in navigating the vast landscape of Philippine jurisprudence, laws, and legal issuances.</p>
+            <p>Our platform combines the latest advances in artificial intelligence with a comprehensive database of Philippine legal resources to deliver fast, accurate, and reliable legal research results.</p>
+          </div>
+          <div class="grid-2 mt-8" style="gap: 1rem;">
+            <div style="padding: 0.75rem; border-radius: 0.75rem; background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(226, 232, 240, 0.5);">
+              <div style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(to right, var(--primary-600), var(--primary-500)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2025</div>
+              <div style="font-size: 0.75rem; color: var(--slate-500); font-weight: 500;">Founded</div>
+            </div>
+            <div style="padding: 0.75rem; border-radius: 0.75rem; background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(226, 232, 240, 0.5);">
+              <div style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(to right, var(--primary-600), var(--primary-500)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">1K+</div>
+              <div style="font-size: 0.75rem; color: var(--slate-500); font-weight: 500;">Legal Professionals</div>
+            </div>
+            <div style="padding: 0.75rem; border-radius: 0.75rem; background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(226, 232, 240, 0.5);">
+              <div style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(to right, var(--primary-600), var(--primary-500)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">500K+</div>
+              <div style="font-size: 0.75rem; color: var(--slate-500); font-weight: 500;">Legal Documents</div>
+            </div>
+            <div style="padding: 0.75rem; border-radius: 0.75rem; background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(226, 232, 240, 0.5);">
+              <div style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(to right, var(--primary-600), var(--primary-500)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">99.9%</div>
+              <div style="font-size: 0.75rem; color: var(--slate-500); font-weight: 500;">Uptime</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-elevated p-6" style="background: linear-gradient(135deg, white, var(--slate-50));">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--slate-900); margin-bottom: 1.5rem;">Our Values</h3>
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div style="display: flex; gap: 1rem;">
+              <div style="width: 2.5rem; height: 2.5rem; border-radius: 0.75rem; background: var(--primary-50); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">🎯</div>
+              <div>
+                <h4 style="font-size: 1rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.125rem;">Accuracy</h4>
+                <p style="font-size: 0.75rem; color: var(--slate-600); line-height: 1.625;">We prioritize accuracy in all legal information we provide, ensuring citations and references are verified.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <div style="width: 2.5rem; height: 2.5rem; border-radius: 0.75rem; background: var(--primary-50); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">🌍</div>
+              <div>
+                <h4 style="font-size: 1rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.125rem;">Accessibility</h4>
+                <p style="font-size: 0.75rem; color: var(--slate-600); line-height: 1.625;">We believe legal information should be accessible to everyone, not just those who can afford expensive research tools.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <div style="width: 2.5rem; height: 2.5rem; border-radius: 0.75rem; background: var(--primary-50); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">💡</div>
+              <div>
+                <h4 style="font-size: 1rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.125rem;">Innovation</h4>
+                <p style="font-size: 0.75rem; color: var(--slate-600); line-height: 1.625;">We continuously improve our AI models and features to stay at the forefront of legal technology.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <div style="width: 2.5rem; height: 2.5rem; border-radius: 0.75rem; background: var(--primary-50); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">🔒</div>
+              <div>
+                <h4 style="font-size: 1rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.125rem;">Privacy</h4>
+                <p style="font-size: 0.75rem; color: var(--slate-600); line-height: 1.625;">We protect your research queries and data with enterprise-grade security measures.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container" style="max-width: 56rem;">
+      <div class="card-elevated cta-card text-center">
+        <div class="cta-bg"></div>
+        <div class="cta-glow-1"></div>
+        <div class="cta-glow-2"></div>
+        <div class="cta-content">
+          <div style="margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+            <img src="images/logo.png" alt="JusConsultus" width="200" height="200">
+          </div>
+          <h2 class="section-heading mb-4">Ready to Transform Your Legal Research?</h2>
+          <p style="font-size: 0.875rem; color: var(--slate-600); margin-bottom: 2rem; max-width: 36rem; margin-left: auto; margin-right: auto; line-height: 1.625;">
+            Join thousands of Philippine legal professionals who are already using JusConsultus AI to conduct faster, smarter legal research.
+          </p>
+          <div class="hero-buttons">
+            <a href="login.html?signup=true" class="btn btn-primary">
+              Get Started Free
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="login.html" class="btn btn-outline">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="JusConsultus" width="20" height="20">
+        <span class="footer-logo-text">JusConsultus AI</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="terms.html" class="footer-link">Terms of Service</a>
+        <a href="help.html" class="footer-link">Help Center</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-copyright">
+        © 2026 JusConsultus AI. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Theme Toggle Button (Fixed) -->
+  <button class="theme-toggle" id="themeToggle" style="position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 50;" onclick="toggleTheme()">
+    <svg class="icon-md" id="sunIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--slate-600);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+    <svg class="icon-md" id="moonIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--slate-300); display: none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

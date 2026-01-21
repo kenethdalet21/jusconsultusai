@@ -131,8 +131,8 @@
     <main class="main-content">
       <!-- Top Header Bar (Mobile) -->
       <header class="nav" style="display: none;" id="mobileHeader">
-        <div class="nav-container container">
-          <button class="hamburger" onclick="toggleSidebar()">
+        <div class="nav-container container" style="padding: 0 1rem;">
+          <button class="hamburger" onclick="toggleSidebar()" style="background: none; border: none; cursor: pointer; padding: 0.5rem;">
             <svg class="icon-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
           <a href="index.html" class="nav-logo">
@@ -469,6 +469,24 @@
       }
       return JSON.parse(userData);
     }
+
+    // Toggle sidebar
+    window.toggleSidebar = function() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      
+      if (!sidebar || !overlay) return;
+      
+      sidebar.classList.toggle('open');
+      
+      if (sidebar.classList.contains('open')) {
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      } else {
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    };
 
     // Initialize dashboard
     function initDashboard() {
